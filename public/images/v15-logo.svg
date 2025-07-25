@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+  </style>
+  <text x="0" y="30" font-size="32" fill="#ca2128">V</text>
+  <text x="45" y="30" font-size="32" fill="#001F3F">15</text>
+</svg>
