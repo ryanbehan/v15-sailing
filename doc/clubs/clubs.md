@@ -27,3 +27,39 @@
 ---
 
 *Additional clubs can be added here as more information becomes available. For each, include website, location, contact, and social media links as shown above.*
+
+---
+
+## Willamette Sailing Club
+- **Location:** Portland, OR
+- **Website:** [willamettesailingclub.com](https://willamettesailingclub.com)
+
+---
+
+## Chicago Corinthian Yacht Club
+- **Location:** Chicago, IL
+- **Website:** [corinthian.org](https://www.corinthian.org)
+
+---
+
+## Larchmont Yacht Club
+- **Location:** Larchmont, NY
+- **Website:** [larchmontyc.org](https://www.larchmontyc.org)
+
+---
+
+## Harbor Island Yacht Club
+- **Location:** Hermitage, TN
+- **Website:** [hiyc.org](https://www.hiyc.org)
+
+---
+
+## Lake Norman Yacht Club
+- **Location:** Mooresville, NC
+- **Website:** [lakenormanyc.org](https://www.lakenormanyc.org)
+
+---
+
+## North Jersey Yacht Racing Association
+- **Location:** New Jersey
+- **Website:** [njyra.org](https://www.njyra.org)
