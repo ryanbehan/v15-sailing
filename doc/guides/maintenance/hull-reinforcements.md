@@ -1,20 +1,22 @@
 ---
-title: "Hull Reinforcements"
-original_pdf: ../../../v15-content/guides/maintenance/Hull Reinforcements.pdf
-section: maintenance
+title: Hull Reinforcements Overview
+description: Understanding the structural evolution and common reinforcements of the Vanguard 15.
+author: Vanguard Class
 ---
 
-Vanguard 15 Hull Reinforcements
-The following reinforcements are sometimes made to Vanguard 15’s that have
-been in use for several seasons.
-The construction of V15’s has evolved in order to make the boats more durable.
-Examples of this are the use of Plexus for all structural bonds in the boat, the
-use of a metal backing plate and tapped fasteners for the mainsheet ratchet
-eyestrap, and the addition of reinforcements in the hull stringers. Another major
-change has been the shortening of the spreader length. The class rule that
-shortens the spreaders to 14” from 16” decreases the rig’s ability to deliver
-punishing loads to the hull, and reduces the benefit of sailing with extreme rig
-tension.
-As always, if you suspect that you have a warranty matter with your boat, please
-contact your V15 dealer. This will allow the fastest and best resolution to all
-warranty matters.
+# Vanguard 15 Hull Reinforcements
+
+Over the years, the construction of the Vanguard 15 has evolved to improve durability and longevity. If you are looking at older boats or considering upgrades, it's helpful to understand these changes.
+
+## Key Structural Improvements
+*   **Plexus Bonding:** Newer boats use Plexus (a high-strength methacrylate adhesive) for all structural bonds, significantly increasing hull stiffness and integrity.
+*   **Mainsheet Eyestrap:** A metal backing plate with tapped fasteners replaced the original wood-block system for the mainsheet ratchet eyestrap. This eliminates the common "soft floor" issue caused by rotting wood.
+*   **Stringer Reinforcements:** Additional reinforcements were added to the hull stringers to prevent cracking and fatigue.
+*   **Spreader Length:** The class rule shortened spreaders from 16" to 14". This reduces the leverage the rig exerts on the hull, decreasing the risk of structural damage from extreme rig tension.
+
+## Warranty Note
+If you suspect a structural issue that might be covered under warranty, always contact your Vanguard 15 dealer first for the best resolution.
+
+## Related Guides
+*   [Eyestrap Repair](eyestrap-repair.md): How to fix a loose mainsheet block on older boats.
+*   [Stringer & Mast Knee Upgrade](stringermastkneeupgra.md): Instructions for reinforcing the floor stringer and mast knee.

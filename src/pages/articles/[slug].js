@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
 import { getArticles } from '../../lib/content';
 
@@ -21,14 +22,19 @@ export default function Article({ article }) {
       <Head>
         <title>{article.title} | V-15 Sailing</title>
       </Head>
-      <article className="prose mx-auto">
-        <h1>{article.title}</h1>
+      <article className="prose prose-lg mx-auto px-4 py-8 max-w-4xl">
+        <h1 className="text-4xl font-bold mb-6 text-navy-blue">{article.title}</h1>
         {article.content ? (
-          <div
-            dangerouslySetInnerHTML={{ __html: article.content }}
-          />
+          article.format === 'markdown' ? (
+            <ReactMarkdown>{article.content}</ReactMarkdown>
+          ) : (
+            <div
+              className="article-content"
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
+          )
         ) : (
-          <p>{article.description}</p>
+          <p className="text-xl text-gray-600">{article.description}</p>
         )}
       </article>
     </>

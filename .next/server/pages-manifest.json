@@ -1,24 +1,9 @@
 {
   "/_app": "pages/_app.js",
-  "/about": "pages/about.html",
-  "/admin": "pages/admin.html",
-  "/articles": "pages/articles.html",
-  "/": "pages/index.html",
-  "/articles/guides": "pages/articles/guides.js",
-  "/articles/[slug]": "pages/articles/[slug].js",
-  "/articles/contacts": "pages/articles/contacts.js",
-  "/articles/part-finder": "pages/articles/part-finder.js",
-  "/articles/parts": "pages/articles/parts.js",
-  "/articles/clubs": "pages/articles/clubs.js",
-  "/guides": "pages/guides.js",
-  "/parts": "pages/parts.js",
-  "/guides/[section]": "pages/guides/[section].js",
-  "/articles/rules": "pages/articles/rules.js",
-  "/parts/[slug]": "pages/parts/[slug].js",
-  "/regattas": "pages/regattas.js",
-  "/guides/[section]/[slug]": "pages/guides/[section]/[slug].js",
-  "/search": "pages/search.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/guides/[section]/[slug]": "pages/guides/[section]/[slug].js",
+  "/regattas": "pages/regattas.js",
+  "/parts/[slug]": "pages/parts/[slug].js",
+  "/guides/[section]": "pages/guides/[section].js"
 }
