@@ -18,15 +18,18 @@ To fix it, you have to understand what's happening below decks. The V-15 cockpit
 
 Over time, water finds its way past the bedding compound and infiltrates this wooden block. The wood softens (rot), and the washer and nut on the underside—which you can't easily reach—start to crush into the mushy core. The result? A loose eyestrap that pulls up every time you sheet in.
 
-```mermaid
-graph TD
-    subgraph "Cockpit Floor Cross-Section"
-    A[Eyestrap] -->|Bolts| B[Fiberglass Skin]
-    B --> C{The Problem Area}
-    C -->|Rotten Wood Core| D[Crushed Backing Plate]
-    D --> E[Fiberglass Skin]
-    end
-    style C fill:#f96,stroke:#333,stroke-width:2px
+```d2
+direction: down
+"Cockpit Floor Cross-Section": {
+  Eyestrap -> "Fiberglass Skin": Bolts
+  "Fiberglass Skin" -> "The Problem Area"
+  "The Problem Area" -> "Crushed Backing Plate": "Rotten Wood Core"
+  "Crushed Backing Plate" -> "Fiberglass Skin"
+  
+  "The Problem Area".style.fill: "#f96"
+  "The Problem Area".style.stroke: "#333"
+  "The Problem Area".style.stroke-width: 2
+}
 ```
 
 ## The Fix: Epoxy Injection
