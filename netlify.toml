@@ -10,6 +10,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self';"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' https://kroki.io;"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"

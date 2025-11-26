@@ -27,7 +27,6 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
-    "mermaid": "^11.12.1",
     "next": "^15.3.5",
     "pako": "^2.1.0",
     "react": "18.2.0",

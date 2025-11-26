@@ -9,10 +9,13 @@ const D2 = ({ chart }) => {
             try {
                 const data = new TextEncoder().encode(chart);
                 const compressed = pako.deflate(data, { level: 9 });
-                const result = Buffer.from(compressed)
-                    .toString('base64')
-                    .replace(/\+/g, '-')
-                    .replace(/\//g, '_');
+                let binary = '';
+                const len = compressed.byteLength;
+                for (let i = 0; i < len; i++) {
+                    binary += String.fromCharCode(compressed[i]);
+                }
+                const base64 = window.btoa(binary);
+                const result = base64.replace(/\+/g, '-').replace(/\//g, '_');
                 setImageUrl(`https://kroki.io/d2/svg/${result}`);
             } catch (error) {
                 console.error('D2 rendering error:', error);
