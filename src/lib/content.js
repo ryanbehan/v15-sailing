@@ -1,10 +1,41 @@
 import { promises as fs } from 'fs';
 import path from 'path';
+import matter from 'gray-matter';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
+const DOC_ARTICLES_DIR = path.join(process.cwd(), 'doc', 'articles');
 
 export async function getArticles() {
-  return readCollection('articles');
+  const jsonArticles = await readCollection('articles');
+  const markdownArticles = await getMarkdownArticles();
+  return [...jsonArticles, ...markdownArticles];
+}
+
+async function getMarkdownArticles() {
+  try {
+    const files = await fs.readdir(DOC_ARTICLES_DIR);
+    const articles = [];
+    for (const file of files) {
+      if (file.endsWith('.md')) {
+        const fullPath = path.join(DOC_ARTICLES_DIR, file);
+        const raw = await fs.readFile(fullPath, 'utf-8');
+        const { data, content } = matter(raw);
+        const slug = path.basename(file, '.md');
+        articles.push({
+          url: slug, // Using slug as url for consistency with JSON articles
+          title: data.title || slug,
+          description: data.description || '',
+          content,
+          format: 'markdown', // Flag to indicate markdown content
+          ...data,
+        });
+      }
+    }
+    return articles;
+  } catch (err) {
+    // Directory might not exist
+    return [];
+  }
 }
 
 export async function getParts() {

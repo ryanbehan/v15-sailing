@@ -2,10 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/guides/[section]": "pages/guides/[section].js",
   "/guides/[section]/[slug]": "pages/guides/[section]/[slug].js",
-  "/": "pages/index.js",
-  "/about": "pages/about.js",
+  "/regattas": "pages/regattas.js",
   "/parts/[slug]": "pages/parts/[slug].js",
-  "/regattas": "pages/regattas.js"
+  "/guides/[section]": "pages/guides/[section].js"
 }
