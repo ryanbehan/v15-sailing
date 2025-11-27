@@ -85,7 +85,8 @@ export default function Navbar() {
               <li><Link href="/parts/spars" className="block px-4 py-2 hover:bg-sky-blue">Spars</Link></li>
               <li><Link href="/parts/running-rigging" className="block px-4 py-2 hover:bg-sky-blue">Running Rigging</Link></li>
               <li><Link href="/parts/sails" className="block px-4 py-2 hover:bg-sky-blue">Sails</Link></li>
-              <li><Link href="/parts" className="block px-4 py-2 hover:bg-sky-blue">Parts Finder</Link></li>
+              <li><Link href="/parts/vendors" className="block px-4 py-2 hover:bg-sky-blue">Vendors</Link></li>
+              <li><Link href="/parts/catalog" className="block px-4 py-2 hover:bg-sky-blue">Parts Finder</Link></li>
             </ul>
           </li>
           <li><Link href="/regattas" className="hover:text-sky-blue">Regattas</Link></li>

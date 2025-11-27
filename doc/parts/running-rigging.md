@@ -12,4 +12,6 @@ Recommended line lengths and diameters:
 - **Cunningham**: 4mm, 10ft
 - **Outhaul**: 4mm, 10ft
 
-Check our [Parts Finder](/parts) for vendors.
+## Vendors
+*   **[West Coast Sailing](https://westcoastsailing.net/boat-parts/vanguard-15/running-rigging/):** Complete line packages and individual sheets.
+*   **[Colie Sails](https://coliesail.com/boats/vanguard-15/v15-lines.html):** Custom spliced lines and tapered sheets.

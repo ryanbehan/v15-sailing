@@ -1,0 +1,134 @@
+[
+    {
+        "id": "94900",
+        "name": "Mainsail",
+        "category": "Sails",
+        "description": "Class legal Vanguard 15 mainsail. Includes battens and sail bag.",
+        "vendors": [
+            {
+                "name": "North Sails",
+                "url": "https://northsails.com/products/vanguard-15-mainsail"
+            }
+        ]
+    },
+    {
+        "id": "94901",
+        "name": "Jib",
+        "category": "Sails",
+        "description": "Class legal Vanguard 15 jib.",
+        "vendors": [
+            {
+                "name": "North Sails",
+                "url": "https://northsails.com/sailing/en/od/vanguard-15"
+            }
+        ]
+    },
+    {
+        "id": "85159",
+        "name": "Rudder Blade",
+        "category": "Blades",
+        "description": "Fiberglass rudder blade for Vanguard 15.",
+        "vendors": [
+            {
+                "name": "Intensity Sails",
+                "url": "https://www.intensitysails.com/frp-rudder-blade-for-cfj--v15.html"
+            }
+        ]
+    },
+    {
+        "id": "85035",
+        "name": "Daggerboard",
+        "category": "Blades",
+        "description": "Fiberglass daggerboard for Vanguard 15.",
+        "vendors": [
+            {
+                "name": "Intensity Sails",
+                "url": "https://www.intensitysails.com/frpdaggerboardforthev15.aspx"
+            }
+        ]
+    },
+    {
+        "id": "90692",
+        "name": "Shroud",
+        "category": "Spars",
+        "description": "Stainless steel shroud for Vanguard 15.",
+        "vendors": [
+            {
+                "name": "Colie Sails",
+                "url": "https://coliesail.com/parts/vanguard-15/vanguard-15-shroud.html"
+            },
+            {
+                "name": "West Coast Sailing",
+                "url": "https://westcoastsailing.net/v15-shroud-pin-shroud-adjusters-vg15200/"
+            }
+        ]
+    },
+    {
+        "id": "91166",
+        "name": "Fast Pin",
+        "category": "Hardware",
+        "description": "Fast pin for mainsail tack or other fittings.",
+        "vendors": [
+            {
+                "name": "Colie Sails",
+                "url": "https://coliesail.com/parts/vanguard-15/fast-pin-for-tack-of-v15-mainsail-1-4.html"
+            },
+            {
+                "name": "West Coast Sailing",
+                "url": "https://westcoastsailing.net/boom-tack-fast-pin-420-fj-v15/"
+            }
+        ]
+    },
+    {
+        "id": "83029",
+        "name": "Mast Sleeve",
+        "category": "Spars",
+        "description": "Protective sleeve for the mast.",
+        "vendors": [
+            {
+                "name": "Colie Sails",
+                "url": "https://coliesail.com/parts/vanguard-15/vanguard-15-mast-sleeve.html"
+            },
+            {
+                "name": "Kinder Industries",
+                "url": "https://www.kinderindustries.com/product/v15-mast-condom/"
+            }
+        ]
+    },
+    {
+        "id": "90404",
+        "name": "Boom Bail",
+        "category": "Spars",
+        "description": "Heavy duty boom bail.",
+        "vendors": [
+            {
+                "name": "West Coast Sailing",
+                "url": "https://westcoastsailing.net/boom-bail-420-fj-v15-lp-zim/"
+            }
+        ]
+    },
+    {
+        "id": "81060",
+        "name": "Main Sheet",
+        "category": "Running Rigging",
+        "description": "Main sheet line for Vanguard 15.",
+        "vendors": [
+            {
+                "name": "West Coast Sailing",
+                "url": "https://westcoastsailing.net/v15-main-sheet-w-tails-vg15300/"
+            }
+        ]
+    },
+    {
+        "id": "91328",
+        "name": "Cam Cleat",
+        "category": "Hardware",
+        "description": "Cam cleat for control lines (Harken 150).",
+        "vendors": [
+            {
+                "name": "Colie Sails",
+                "url": "https://coliesail.com/harken-150-standard-cam-matic.html"
+            }
+        ]
+    }
+]
