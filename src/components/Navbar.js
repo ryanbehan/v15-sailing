@@ -41,7 +41,7 @@ export default function Navbar() {
   const [menu, setMenu] = useState(null);
 
   return (
-    <header className="bg-navy-blue text-white">
+    <header className="bg-navy-blue text-white relative z-50">
       <nav className="container mx-auto flex items-center justify-between p-4">
         <Link href="/" className="text-xl font-bold flex items-center gap-2">
           <img src="/images/v15-logo.png" alt="Vanguard 15 logo" className="h-8 w-auto" />
