@@ -28,7 +28,7 @@ Connect with the V15 community at these active clubs and fleets.
 ## East Coast
 ### Connetquot River Dinghy Club
 *   **Location:** Oakdale, NY
-*   **Website:** [connetquotriverdinghyclub.com](https://connetquotriverdinghyclub.com/)
+*   **Website:** [crdc.v-15.org](https://crdc.v-15.org) — home of the CRDC Frostbite Series
 *   **Facebook:** [CRDC Facebook Group](https://www.facebook.com/groups/connetquotriverdinghyclub)
 
 ### Larchmont Yacht Club
