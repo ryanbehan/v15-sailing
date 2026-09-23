@@ -44,7 +44,7 @@ export default function Navbar() {
     <header className="bg-navy-blue text-white">
       <nav className="container mx-auto flex items-center justify-between p-4">
         <Link href="/" className="text-xl font-bold flex items-center gap-2">
-          <img src="/images/v15-logo.svg" alt="Vanguard 15 logo" className="w-8 h-8" />
+          <img src="/images/v15-logo.png" alt="Vanguard 15 logo" className="h-8 w-auto" />
           <span>V-15 Sailing</span>
         </Link>
         <button
