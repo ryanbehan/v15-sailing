@@ -2,6 +2,7 @@
 title: Be Patient Going Downhill
 description: Strategies for maximizing speed and tactical advantage on downwind legs.
 author: Stan Schreyer
+original_pdf: guides/racing/Downhill.pdf
 ---
 
 # Be Patient Going Downhill

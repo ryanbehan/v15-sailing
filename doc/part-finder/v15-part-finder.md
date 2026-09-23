@@ -46,4 +46,4 @@ Looking for parts for your Vanguard 15? Below are trusted suppliers and categori
 
 ---
 
-*Tip: For each part, check multiple suppliers for price and availability. If you’re unsure what you need, refer to the [Parts Guide PDF](../parts/parts-guide-vanguard-15-laser-performance.pdf) for diagrams and part numbers.*
+*Tip: For each part, check multiple suppliers for price and availability. If you’re unsure what you need, refer to the [Parts Guide PDF](/parts/parts-guide-vanguard-15-laser-performance.pdf) for diagrams and part numbers.*

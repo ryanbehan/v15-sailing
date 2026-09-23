@@ -2,6 +2,7 @@
 title: Fleet Development Tips
 description: Strategies for building and sustaining a successful Vanguard 15 fleet.
 author: Nick Adamson, Fleet 53
+original_pdf: guides/FleetDevelopmentTipsAdamson.pdf
 ---
 
 # Building a Strong Fleet

@@ -1,7 +1,8 @@
+import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
+import Markdown from '../../components/Markdown';
 
 export async function getStaticPaths() {
   const base = path.join(process.cwd(), 'doc', 'parts');
@@ -19,9 +20,14 @@ export async function getStaticProps({ params }) {
 
 export default function PartCategory({ title, content }) {
   return (
-    <div className="prose mx-auto py-8">
-      <h1>{title}</h1>
-      <ReactMarkdown>{content}</ReactMarkdown>
-    </div>
+    <>
+      <Head>
+        <title>{`${title} | V-15 Sailing`}</title>
+      </Head>
+      <div className="prose mx-auto py-8">
+        <h1>{title}</h1>
+        <Markdown content={content} />
+      </div>
+    </>
   );
 }

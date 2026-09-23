@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import { getArticlesBySection } from '../../../lib/guides';
 
@@ -18,9 +19,14 @@ export async function getStaticProps({ params }) {
 
 export default function GuidesSection({ section, articles }) {
   const title = section.replace(/-/g, ' ');
+  const display = `${title.charAt(0).toUpperCase() + title.slice(1)} Guides`;
   return (
-    <div className="prose mx-auto py-8">
-      <h1>{title.charAt(0).toUpperCase() + title.slice(1)} Guides</h1>
+    <>
+      <Head>
+        <title>{`${display} | V-15 Sailing`}</title>
+      </Head>
+      <div className="prose mx-auto py-8">
+        <h1>{display}</h1>
       <div className="space-y-4">
         {articles.map((a) => (
           <div key={a.slug} className="border rounded-lg p-4 hover:bg-gray-50 transition leading-relaxed">
@@ -30,6 +36,7 @@ export default function GuidesSection({ section, articles }) {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </>
   );
 }

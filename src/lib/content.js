@@ -8,7 +8,12 @@ const DOC_ARTICLES_DIR = path.join(process.cwd(), 'doc', 'articles');
 export async function getArticles() {
   const jsonArticles = await readCollection('articles');
   const markdownArticles = await getMarkdownArticles();
-  return [...jsonArticles, ...markdownArticles];
+  const seen = new Set();
+  return [...markdownArticles, ...jsonArticles].filter((a) => {
+    if (seen.has(a.url)) return false;
+    seen.add(a.url);
+    return true;
+  });
 }
 
 async function getMarkdownArticles() {
@@ -67,8 +72,12 @@ async function readCollection(collectionName) {
   }
   // fallback single file (array of objects)
   const singlePath = path.join(CONTENT_DIR, `${collectionName}.json`);
-  const data = await fs.readFile(singlePath, 'utf-8');
-  return JSON.parse(data);
+  try {
+    const data = await fs.readFile(singlePath, 'utf-8');
+    return JSON.parse(data);
+  } catch (err) {
+    return [];
+  }
 }
 
 export async function getAllContent() {
@@ -78,7 +87,7 @@ export async function getAllContent() {
     getRegattas(),
   ]);
   return [
-    ...articles.map((a) => ({ id: a.url, title: a.title, text: `${a.title} ${a.description}`, type: 'article', url: a.url })),
+    ...articles.map((a) => ({ id: a.url, title: a.title, text: `${a.title} ${a.description}`, type: 'article', url: `/articles/${a.url}` })),
     ...parts.map((p) => ({ id: p.url, title: p.name, text: `${p.name} ${p.description}`, type: 'part', url: p.url })),
     ...regattas.map((r) => ({ id: r.url, title: r.name, text: `${r.name} ${r.location}`, type: 'regatta', url: r.url })),
   ];

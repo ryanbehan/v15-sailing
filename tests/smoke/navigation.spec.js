@@ -14,7 +14,8 @@ test.describe('Navigation', () => {
   for (const route of routes) {
     test(`should load ${route} page`, async ({ page }) => {
       await page.goto(route);
-      await expect(page).toHaveURL(new RegExp(`${route}$`));
+      // Site uses trailingSlash: tolerate an optional trailing slash.
+      await expect(page).toHaveURL(new RegExp(`${route.replace(/\/$/, '')}/?$`));
       // Check for some content
       await expect(page.locator('body')).not.toBeEmpty();
     });

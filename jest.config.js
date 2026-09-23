@@ -7,15 +7,13 @@ const createJestConfig = nextJest({
 
 /** @type {import('jest').Config} */
 const customJestConfig = {
-  testEnvironment: 'node',
+  testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     // Ignore CSS and image imports
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(png|jpg|jpeg|gif|svg)$': '<rootDir>/__mocks__/fileMock.js',
+    '\\.(png|jpg|jpeg|gif|svg|webp)$': '<rootDir>/__mocks__/fileMock.js',
   },
-  setupFilesAfterEnv: [],
   testPathIgnorePatterns: ['/node_modules/', '/.next/', '/tests/playwright/', '/tests/smoke/'],
-  testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
 

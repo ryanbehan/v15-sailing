@@ -2,6 +2,7 @@
 title: Hull Reinforcements Overview
 description: Understanding the structural evolution and common reinforcements of the Vanguard 15.
 author: Vanguard Class
+original_pdf: guides/maintenance/hull-reinforcements.pdf
 ---
 
 # Vanguard 15 Hull Reinforcements
@@ -18,5 +19,6 @@ Over the years, the construction of the Vanguard 15 has evolved to improve durab
 If you suspect a structural issue that might be covered under warranty, always contact your Vanguard 15 dealer first for the best resolution.
 
 ## Related Guides
-*   [Eyestrap Repair](eyestrap-repair.md): How to fix a loose mainsheet block on older boats.
-*   [Stringer & Mast Knee Upgrade](stringermastkneeupgra.md): Instructions for reinforcing the floor stringer and mast knee.
+*   [Eyestrap Repair](/guides/maintenance/eyestrap-repair): How to fix a loose mainsheet block on older boats.
+*   [Stringer & Mast Knee Upgrade](/guides/maintenance/stringermastkneeupgra): Instructions for reinforcing the floor stringer and mast knee.
+*   [Maintenance Tips (PDF)](/guides/maintenance/MaintenanceTips.pdf): General care and upkeep checklist for the V15.

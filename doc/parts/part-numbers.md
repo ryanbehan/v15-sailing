@@ -50,10 +50,10 @@ This catalog lists part numbers and descriptions for the Vanguard 15, based on t
 *   **85265**: Gudgeon Bushing
 
 ## Recommended Vendors
-*   **[West Coast Sailing](https://westcoastsailing.net/boat-parts/vanguard-15/)**: Extensive inventory of V15 parts, sails, and rigging.
-*   **[Colie Sails](https://coliesail.com/boats/vanguard-15.html)**: Specialized V15 parts and expert advice.
-*   **[Intensity Sails](https://www.intensitysails.com/vanguard-15-parts.html)**: Cost-effective parts and foils.
-*   **[North Sails](https://northsails.com/sailing/en/od/vanguard-15)**: Official class sails.
+*   **[West Coast Sailing](https://westcoastsailing.net/parts/vanguard-15-sailboat-parts)**: Extensive inventory of V15 parts, sails, and rigging.
+*   **[Colie Sails](https://coliesail.com/search?q=vanguard+15)**: Specialized V15 parts and expert advice.
+*   **[Intensity Sails](https://www.intensitysails.com/vanguard-15)**: Cost-effective parts and foils.
+*   **[North Sails](https://www.northsails.com/pages/one-design)**: Official class sails.
 *   **[Vela Sailing Supply](https://www.velasailingsupply.com/)**: General hardware.
 
 > [!TIP]

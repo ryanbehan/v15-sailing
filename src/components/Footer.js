@@ -1,11 +1,11 @@
 const links = [
-  { href: '/articles', label: 'Articles' },
-  { href: '/parts', label: 'Parts' },
-  { href: '/regattas', label: 'Regattas' },
-  { href: '/about', label: 'About' },
+  { href: '/articles/', label: 'Articles' },
+  { href: '/parts/', label: 'Parts' },
+  { href: '/regattas/', label: 'Regattas' },
+  { href: '/about/', label: 'About' },
 ];
 const socials = [
-  { href: 'https://github.com/southbay82/v15-sailing', label: 'GitHub' },
+  { href: 'https://github.com/ryanbehan/v15-sailing', label: 'GitHub' },
 ];
 
 export default function Footer() {

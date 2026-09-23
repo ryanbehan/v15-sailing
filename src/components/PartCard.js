@@ -41,11 +41,13 @@ export default function PartCard({ part }) {
                 </div>
             </div>
 
-            {!showVendors && (
-                <div className="text-center text-sky-600 text-sm font-medium mt-2">
-                    Hover to see vendors
-                </div>
-            )}
+            <button
+                type="button"
+                className={`w-full text-center text-sky-600 text-sm font-medium mt-2 ${showVendors ? 'hidden' : ''}`}
+                onClick={() => setShowVendors(true)}
+            >
+                Show vendors
+            </button>
         </div>
     );
 }

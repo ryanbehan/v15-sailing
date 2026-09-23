@@ -29,7 +29,7 @@ If you are looking to join the fun, your best bet is to reach out to a local fle
 *   **[Cedar Point Yacht Club](https://www.cedarpointyc.org/)**
 *   **[Willamette Sailing Club](https://willamettesailingclub.com/)**
 
-*Check our [Clubs & Fleets](/clubs/clubs) page for a more comprehensive list of active locations.*
+*Check our [Clubs & Fleets](/articles/clubs) page for a more comprehensive list of active locations.*
 
 ## Social Media
 

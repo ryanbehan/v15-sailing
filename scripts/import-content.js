@@ -47,6 +47,16 @@ async function importContent() {
                     content = bodyMatch[1];
                 }
 
+                // Sanitize: drop scripts, inline handlers, javascript: hrefs, and Wayback chrome
+                content = content
+                    .replace(/<script[\s\S]*?<\/script>/gi, '')
+                    .replace(/<!-- BEGIN WAYBACK TOOLBAR -->[\s\S]*?<!-- END WAYBACK TOOLBAR -->/gi, '')
+                    .replace(/<div id="wm-ipp[\s\S]*?<\/div>\s*<\/div>/gi, '')
+                    .replace(/\son\w+="[^"]*"/gi, '')
+                    .replace(/\son\w+='[^']*'/gi, '')
+                    .replace(/href="javascript:[^"]*"/gi, 'href="#"')
+                    .replace(/<input[^>]*__yoroi[^>]*>/gi, '');
+
                 const filename = path.basename(filePath);
                 const slug = filename.replace(/\.(html|htm)$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
 

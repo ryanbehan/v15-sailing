@@ -8,7 +8,7 @@ description: A look back at the active Vanguard 15 fleets from the class's histo
 **By V15 Class Association (Archived)**
 
 > [!WARNING]
-> **Historical Archive:** The following list reflects the fleet status as of circa 2010. Contact information and fleet captains have likely changed. For current active fleets and contact details, please visit our [Clubs & Fleets](/clubs/clubs) page.
+> **Historical Archive:** The following list reflects the fleet status as of circa 2010. Contact information and fleet captains have likely changed. For current active fleets and contact details, please visit our [Clubs & Fleets](/articles/clubs) page.
 
 The Vanguard 15 class has a rich history of active fleets across the country. Below is a snapshot of the fleets that have driven the class's growth over the years.
 

@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import ReactMarkdown from 'react-markdown';
 import { getGuideArticles, getArticle } from '../../../lib/guides';
 
 import D2 from '../../../components/D2';
+import Markdown from '../../../components/Markdown';
 
 export default function GuideArticle({ article }) {
   const router = useRouter();
@@ -13,31 +13,26 @@ export default function GuideArticle({ article }) {
   return (
     <>
       <Head>
-        <title>{article.title} | V-15 Guides</title>
+        <title>{`${article.title} | V-15 Guides`}</title>
       </Head>
       <article className="prose mx-auto py-8">
         <h1>{article.title}</h1>
-        <ReactMarkdown
+        <Markdown
+          content={article.content}
           components={{
             code({ node, inline, className, children, ...props }) {
               const match = /language-(\w+)/.exec(className || '');
               if (!inline && match && match[1] === 'd2') {
                 return <D2 chart={String(children).replace(/\n$/, '')} />;
               }
-              return !inline && match ? (
-                <code className={className} {...props}>
-                  {children}
-                </code>
-              ) : (
+              return (
                 <code className={className} {...props}>
                   {children}
                 </code>
               );
             },
           }}
-        >
-          {article.content}
-        </ReactMarkdown>
+        />
         {article.original_pdf && (
           <p>
             Original PDF: {' '}

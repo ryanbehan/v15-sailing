@@ -1,7 +1,8 @@
 import React from 'react';
+import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
-import ReactMarkdown from 'react-markdown';
+import Markdown from '../../components/Markdown';
 
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'doc/clubs/clubs.md');
@@ -19,26 +20,30 @@ export async function getStaticProps() {
 
 export default function Clubs({ clubs }) {
   return (
-    <div className="prose mx-auto py-8">
-      <h1>Vanguard 15 Clubs</h1>
-      <div className="space-y-4">
-        {clubs.map(({ title, body }) => (
-          <div key={title} className="border rounded-lg p-4 hover:bg-gray-50 transition">
-            <h3>{title}</h3>
-            <ReactMarkdown
-              components={{
-                ul: ({ node, ...props }) => <ul className="list-disc pl-5" {...props} />,
-                li: ({ node, ...props }) => <li className="leading-relaxed" {...props} />,
-                a: ({ node, ...props }) => (
-                  <a className="text-sky-blue hover:underline" {...props} />
-                ),
-              }}
-            >
-              {body}
-            </ReactMarkdown>
-          </div>
-        ))}
+    <>
+      <Head>
+        <title>Clubs | V-15 Sailing</title>
+      </Head>
+      <div className="prose mx-auto py-8">
+        <h1>Vanguard 15 Clubs</h1>
+        <div className="space-y-4">
+          {clubs.map(({ title, body }) => (
+            <div key={title} className="border rounded-lg p-4 hover:bg-gray-50 transition">
+              <h3>{title}</h3>
+              <Markdown
+                content={body}
+                components={{
+                  ul: ({ node, ...props }) => <ul className="list-disc pl-5" {...props} />,
+                  li: ({ node, ...props }) => <li className="leading-relaxed" {...props} />,
+                  a: ({ node, ...props }) => (
+                    <a className="text-sky-blue hover:underline" {...props} />
+                  ),
+                }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

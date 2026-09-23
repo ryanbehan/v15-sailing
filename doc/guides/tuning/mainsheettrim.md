@@ -2,6 +2,7 @@
 title: Mainsheet Trim
 description: Understanding the balance between angle of attack and leech tension for optimal speed.
 author: Dave Kirkpatrick
+original_pdf: guides/tuning/MainsheetTrim.pdf
 ---
 
 # Mainsheet Trim: Angle of Attack vs. Leech Tension

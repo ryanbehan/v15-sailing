@@ -1,8 +1,9 @@
-local_backend: true
+# For local editing, run `npx netlify-cms-proxy-server` and uncomment:
+# local_backend: true
 backend:
   name: git-gateway
   branch: main
-  repo: southbay82/v15-sailing
+  repo: ryanbehan/v15-sailing
 
 media_folder: public/images/uploads
 public_folder: /images/uploads
@@ -10,17 +11,16 @@ public_folder: /images/uploads
 collections:
   - name: articles
     label: Articles
-    folder: content/articles
+    folder: doc/articles
     create: true
     delete: true
     slug: "{{slug}}"
-    extension: json
-    format: json
+    extension: md
+    format: frontmatter
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: URL, name: url, widget: string }
       - { label: Description, name: description, widget: text }
-      - { label: Category, name: category, widget: select, options: [Techniques, Maintenance, History] }
+      - { label: Body, name: body, widget: markdown }
   - name: parts
     label: Parts
     folder: content/parts
@@ -43,6 +43,6 @@ collections:
     format: json
     fields:
       - { label: Event Name, name: name, widget: string }
-      - { label: Date, name: date, widget: datetime }
+      - { label: Date, name: date, widget: string }
       - { label: Location, name: location, widget: string }
       - { label: Registration URL, name: url, widget: string }

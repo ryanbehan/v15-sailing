@@ -2,6 +2,7 @@
 title: Stringer and Mast Knee Upgrade
 description: Step-by-step instructions for reinforcing the floor stringer and mast knee.
 author: Vanguard Class
+original_pdf: guides/maintenance/StringerMastKneeUpgra.pdf
 ---
 
 # Floor Stringer and Mast Knee Reinforcement

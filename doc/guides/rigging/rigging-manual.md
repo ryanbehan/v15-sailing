@@ -2,6 +2,7 @@
 title: Vanguard 15 Rigging Manual
 description: The official step-by-step guide to rigging your Vanguard 15.
 author: Vanguard Class
+original_pdf: guides/rigging/rigging-manual.pdf
 ---
 
 # Vanguard 15 Rigging Manual
@@ -92,3 +93,6 @@ The mast comes rigged except for the spreaders.
 
 > [!WARNING]
 > **Towing:** Do not tow the V15 at high speeds (max 6 knots). Hull damage from high-speed towing is not covered by warranty.
+
+## Additional Resources
+*   [Legacy V15 Rigging Manual (PDF)](/guides/rigging/v15-rigging-manual.pdf): The earlier edition of the rigging manual, for reference.

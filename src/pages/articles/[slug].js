@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
+import Markdown from '../../components/Markdown';
 import { getArticles } from '../../lib/content';
 
 export default function Article({ article }) {
@@ -20,13 +20,13 @@ export default function Article({ article }) {
   return (
     <>
       <Head>
-        <title>{article.title} | V-15 Sailing</title>
+        <title>{`${article.title} | V-15 Sailing`}</title>
       </Head>
       <article className="prose prose-lg mx-auto px-4 py-8 max-w-4xl">
         <h1 className="text-4xl font-bold mb-6 text-navy-blue">{article.title}</h1>
         {article.content ? (
           article.format === 'markdown' ? (
-            <ReactMarkdown>{article.content}</ReactMarkdown>
+            <Markdown content={article.content} />
           ) : (
             <div
               className="article-content"

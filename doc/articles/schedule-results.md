@@ -1,5 +1,6 @@
 ---
 title: 2005 Season Results
+description: Grand Prix and National Championship results from the 2005 racing season.
 ---
 
 # 2005 V15 National Class Results
@@ -39,8 +40,8 @@ Here are the results for the 2005 racing season, including Grand Prix events and
 
 ## Archive
 
-*   [2004 Results](/schedule04/index.html)
-*   [2003 Results](/schedule03/index.html)
-*   [2002 Results](/schedule02/index.html)
-*   [2001 Results](/schedule01/index.html)
-*   [2000 Results](/results00/results00.html)
+*   [2004 Results](https://web.archive.org/web/*/http://www.vanguard15.net/schedule04/index.html)
+*   [2003 Results](https://web.archive.org/web/*/http://www.vanguard15.net/schedule03/index.html)
+*   [2002 Results](https://web.archive.org/web/*/http://www.vanguard15.net/schedule02/index.html)
+*   [2001 Results](https://web.archive.org/web/*/http://www.vanguard15.net/schedule01/index.html)
+*   [2000 Results](https://web.archive.org/web/*/http://www.vanguard15.net/results00/results00.html)

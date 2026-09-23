@@ -22,11 +22,15 @@ export default function Search({ docs }) {
       setResults([]);
       return;
     }
-    const matches = idx.search(`*${query}*`).map((r) => {
-      const doc = docs.find((d) => d.id === r.ref);
-      return doc;
-    });
-    setResults(matches);
+    try {
+      const matches = idx.search(query).map((r) => {
+        const doc = docs.find((d) => d.id === r.ref);
+        return doc;
+      }).filter(Boolean);
+      setResults(matches);
+    } catch (err) {
+      setResults([]);
+    }
   }, [query, idx, docs]);
 
   return (
@@ -45,10 +49,16 @@ export default function Search({ docs }) {
       {results.length > 0 ? (
         <ul className="space-y-4">
           {results.map((r) => (
-            <li key={r.id} className="border p-4 rounded-md hover:bg-gray-50">
-              <a href={r.url} target="_blank" rel="noopener" className="text-lg font-semibold text-sky-blue underline">
-                {r.title}
-              </a>
+            <li key={`${r.type}-${r.id}`} className="border p-4 rounded-md hover:bg-gray-50">
+              {r.url.startsWith('http') ? (
+                <a href={r.url} target="_blank" rel="noopener" className="text-lg font-semibold text-sky-blue underline">
+                  {r.title}
+                </a>
+              ) : (
+                <a href={r.url} className="text-lg font-semibold text-sky-blue underline">
+                  {r.title}
+                </a>
+              )}
               <p className="text-sm text-gray-600 capitalize">{r.type}</p>
             </li>
           ))}

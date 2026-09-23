@@ -1,8 +1,9 @@
 import React from 'react';
+import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
+import Markdown from '../../components/Markdown';
 
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'doc/contacts/contacts.md');
@@ -13,9 +14,13 @@ export async function getStaticProps() {
 
 export default function Contacts({ content }) {
   return (
-    <div className="prose mx-auto py-8">
-      <h1>Vanguard 15 Contacts</h1>
-      <ReactMarkdown>{content}</ReactMarkdown>
-    </div>
+    <>
+      <Head>
+        <title>Contacts | V-15 Sailing</title>
+      </Head>
+      <div className="prose mx-auto py-8">
+        <Markdown content={content} />
+      </div>
+    </>
   );
 }

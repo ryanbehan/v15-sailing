@@ -1,18 +1,21 @@
 # Vanguard 15 Contacts
 
 ## Officers
-- See the [Officers HTML](../../v15-content/contacts/V15 National Class - Officers.html) for the current officer list and contact emails.
+- See the [Officers page](/articles/v15-national-class-officers) for the current officer list and contact emails.
 
 ## Membership
-- Membership information and sign-up: [Membership HTML](../../v15-content/contacts/V15 National Class - Membership.html)
+- Membership information and sign-up: [Membership page](/articles/v15-national-class-membership)
 
 ## Technical Committee
-- Technical committee details: [Tech Committee HTML](../../v15-content/contacts/V15 National Class - Techinacal Committe.html)
+- Technical committee details: [Technical Committee page](/articles/v15-national-class-technical-committee)
 
 ## Fleet Contacts
-- Fleet contact directory: [Fleet Contacts HTML](../../v15-content/contacts/V15 National Class - Fleet Contacts.html)
+- Fleet contact directory: [Fleet Contacts page](/articles/v15-national-class-fleet-contacts)
 
 ## Email List
-- Join or view the class email list: [Email List HTML](../../v15-content/contacts/V15 National Class - E-mail List.html)
+- Join or view the class email list: [Email List page](/articles/v15-national-class-e-mail-list)
 
-*For privacy, detailed contact info may only be available in the linked HTML documents.*
+## Clubs & Fleets
+- Find a fleet near you: [Vanguard 15 Clubs](/articles/clubs)
+
+*For privacy, detailed contact info is listed on the linked pages.*
