@@ -28,3 +28,9 @@ Fixed in `doc/articles/schedule-results.md`:
 - Removed 4 unrecoverable links (SYC NOR, Larchmont NE results, Midwinters '06 results, USTRA team-racing results) — replaced with em-dash; no snapshot exists anywhere.
 
 Verified-keep (bot-blocked, real pages): Facebook x3 (200 in browser), Kinder Industries (Cloudflare 403, product page confirmed via Wayback 2019 + site live), eBay search, Sailing Anarchy (202 Cloudflare challenge).
+
+## Clubs & regattas refresh
+
+- Deleted `doc/articles/schedule-results.md` (2005 results archive) + sitemap entry; page now 404s as intended.
+- `doc/clubs/clubs.md` rewritten to verified-active fleets only: Fleet 53, TISC, ACSC (sailalameda.org), Inverness YC, Fresno YC, Willamette, Seattle YC (13-boat training fleet), CRDC, Larchmont YC (Spring Regatta), Chicago Corinthian Fleet 67, Lake Norman YC (2023 Nationals host), HIYC, Percy Priest YC, PNW Fleet 69 mailing list. Removed NJYRA (association, no V15 fleet evidence).
+- `content/regattas/*.json` now carry `host` + `hostUrl`; new entries: V15 Nationals/PCC, Larchmont Spring Regatta, Fleet 67 Thursday Series, Fleet 67 Fall Frostbiting, Lake Norman V15 Racing. `regattas.js` renders "Host:" club links and links to the clubs page.
