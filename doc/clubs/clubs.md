@@ -53,6 +53,12 @@ Connect with the V15 community at these active clubs and fleets.
 *   **Website:** [crdc.v-15.org](https://crdc.v-15.org) — home of the CRDC Frostbite Series
 *   **Facebook:** [CRDC Facebook Group](https://www.facebook.com/groups/connetquotriverdinghyclub)
 
+<div class="grid grid-cols-3 gap-2 my-2">
+  <img src="/images/crdc/river-racing.jpg" alt="V15s racing on the Connetquot River" class="rounded w-full h-24 object-cover" />
+  <img src="/images/crdc/sailors-drysuits.jpg" alt="CRDC sailors in drysuits" class="rounded w-full h-24 object-cover" />
+  <img src="/images/crdc/snowy-boatyard.jpg" alt="Snowy CRDC boatyard" class="rounded w-full h-24 object-cover" />
+</div>
+
 ### Larchmont Yacht Club
 *   **Location:** Larchmont, NY
 *   **Website:** [larchmontyc.org](https://www.larchmontyc.org)

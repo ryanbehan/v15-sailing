@@ -86,6 +86,27 @@ export default function Home({ articles }) {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 pb-16">
+        <h2 className="text-2xl font-bold text-navy-blue mb-2">From the Fleets</h2>
+        <p className="text-gray-600 mb-4">
+          Frostbiting at{' '}
+          <a href="https://crdc.v-15.org" target="_blank" rel="noopener" className="text-sky-blue underline">
+            Connetquot River Dinghy Club
+          </a>
+          , Oakdale NY.
+        </p>
+        <div className="grid gap-4 grid-cols-2 md:grid-cols-4">
+          {[
+            { src: '/images/crdc/start-lineup.jpg', alt: 'V15s lined up at a start' },
+            { src: '/images/crdc/frostbite-fleet.jpg', alt: 'Frostbite fleet racing in winter' },
+            { src: '/images/crdc/capsize-recovery.jpg', alt: 'Sailor righting a capsized V15' },
+            { src: '/images/crdc/fleet-group-photo.jpg', alt: 'CRDC fleet sailors on shore' },
+          ].map((img) => (
+            <img key={img.src} src={img.src} alt={img.alt} className="rounded-lg shadow w-full h-40 object-cover" />
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-4 pb-16">
         <h2 className="text-2xl font-bold text-navy-blue mb-4">Latest Articles</h2>
         <ul className="space-y-3">
           {articles.map((a) => (
