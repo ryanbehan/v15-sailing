@@ -1,61 +1,51 @@
 # Task Plan for Vanguard 15 Sailing Website Project
 
-## Subtask Breakdown
-The project is divided into 7 subtasks to optimize token usage and maintain focused conversations. Each subtask will be completed in sequence, transitioning via the new_task tool with summarized context.
+## Completed Work Log
 
-1. **Project Setup**
-   - Initialize Node.js project (done: npm init -y).
-   - Install dependencies: next, react, react-dom, tailwindcss (dev), postcss (dev), autoprefixer (dev) (done).
-   - Initialize Tailwind CSS configuration (pending: resolve npx tailwindcss init -p error).
-   - Create config files: next.config.js, tailwind.config.js, postcss.config.js, netlify.toml.
-   - Set up directory structure: /pages, /components, /content, /public, /static/admin.
-   - Status: In progress.
+### Launch-readiness overhaul (merged to main, `f2651a9`)
+- Deleted ~8.4MB of raw Wayback-scrape article JSONs + `content/articles.json`; clean `doc/articles/*.md` markdown is now the single content source.
+- Shared `src/components/Markdown.js` (remark-gfm + rehype-raw) renders tables/HTML blocks correctly.
+- `/articles` index slimmed 4MB→9KB; article pages ~1.4MB→~27KB.
+- Search fixed (article hrefs prefixed `/articles/`; lunr wildcard bug removed); nav dropdowns keyboard-accessible; Search + Part Finder linked in nav.
+- `pages/admin.js` deleted → Decap CMS loads at `/admin/`; CSP relaxed for `/admin/*` only; SPA catch-all removed from `netlify.toml` (real 404s now).
+- 14 PDFs + photos copied from v15-content → `public/`; all `../../v15-content/`, `.md`, and old-site links rewritten.
+- Titles added site-wide (React comment artifacts removed), `lang="en"`, branded 404, `robots.txt`, `sitemap.xml`.
+- Dead vendor links replaced with verified URLs (APS→WCS hub etc.); footer GitHub corrected; smoke tests + CI fixed.
+- Verified: build clean (43 pages), jest 1/1, Playwright 7/7, crawl 0 broken internal links/assets/anchors.
 
-2. **Basic Structure and Navigation**
-   - Create main pages (e.g., index.js, articles.js, parts.js, regattas.js, **about.js**).
-   - Develop reusable components (e.g., Navbar, Footer, ArticleCard).
-   - Implement site navigation and routing.
-   - Status: Not started.
+### External-link audit (`8864db3`)
+- Revalidated all external URLs; Wayback availability + CDX APIs for ground truth (rate-limit `000`s filtered out).
+- Fixed 5 archive links (wrong host vanguard15.net→v15.org, pinned to real snapshots), 5 result links (www/non-www captures, real NOR doc found).
+- Removed 4 unrecoverable links (no snapshot exists anywhere) — replaced with em-dash.
+- Classified bot-blocks correctly: Facebook, Kinder Industries, eBay, Sailing Anarchy all verified real.
 
-3. **Content Integration**
-   - Migrate and organize content from v15-content/ into /content (Markdown/JSON files).
-   - Implement dynamic content loading for articles, parts recommendations, and regatta info.
-   - Add client-side search using Lunr.js.
-   - **Create sample JSON/Markdown content** for at least 5 articles, 5 parts vendors, and 5 regatta events to populate /content.
-   - Status: Not started.
+### Clubs & regattas refresh (`087b1a3`)
+- Deleted `schedule-results.md` (2005 results archive) + sitemap entry.
+- `clubs.md` rewritten to verified-active fleets only (Fleet 53, Fleet 67/Chicago Corinthian, Larchmont, Lake Norman, HIYC/Percy Priest, CRDC, ACSC, TISC, Inverness, Fresno, Seattle, Willamette, PNW Fleet 69).
+- Regattas: `host`/`hostUrl` fields; 12 real events incl. CRDC Frostbite Series (`d3165bc`).
 
-4. **Styling and Design**
-   - Apply Tailwind CSS classes for responsive, mobile-first design.
-   - Use sailing-themed color palette (navy blue, white, sky blue).
-   - Add subtle animations and ensure accessibility.
-   - Status: Not started.
+### Visual/photo work (`c257a02`, `8f17b51`, `68d73db`, `f825f0f`, `86fc2cf`, `721383f`)
+- Authentic Vanguard emblem (`v15_logo_small.gif` → `v15-logo.png`) in navbar + favicon; stale SVGs deleted.
+- Header `z-50` fixes dropdowns falling behind homepage hero.
+- 12 CRDC photos pulled from crdc.v-15.org gallery → `public/images/crdc/`; woven into homepage strip, CRDC club card, `/gallery`.
+- Homepage "The Vanguard 15" image → `start-lineup.jpg`.
+- Regatta cards render lazy-loaded thumbnails (`image`/`imageAlt` fields, CMS-editable).
+- `/gallery` sectioned per fleet; 7 Fleet 53 SF Bay photos added from vanguard15.org/photos (`ee185f7`).
+- `tailwind.config.js` content scan extended to `doc/**/*.md`.
 
-5. **CMS and Admin Integration**
-   - Configure Netlify CMS for content management.
-   - Set up admin interface at /admin.
-   - Integrate with Git repo for content updates.
-   - Status: Not started.
+### Dependency cleanup (`ee185f7`)
+- `npm audit` → **0 vulnerabilities** (was 29+): removed deprecated `netlify-cms-proxy-server`, npm `overrides` patched next's vendored postcss 8.4.31→8.5.28; lockfile regenerated (next@15.5.26).
 
-6. **Optimization, Security, and Testing**
-   - Optimize for performance (target Lighthouse score 90+).
-   - Implement security headers (e.g., Content-Security-Policy).
-   - Ensure mobile responsiveness and cross-browser compatibility.
-   - Add tests if necessary.
-   - Status: Not started.
+## Current Status
+- Everything merged to `main` and pushed through `858d220`. Site builds clean (43 pages), all tests pass, local preview on :8931.
+- **Not yet verified:** production deploy state at v-15.org / Netlify URL.
 
-7. **Deployment and Finalization**
-   - Configure Netlify deployment with CI/CD from GitHub.
-   - Set up custom domain (https://v-15.org) and admin email (skipper@v-15.org).
-   - Perform final testing and optimizations.
-   - **Write a comprehensive README.md** covering deployment instructions (linking GitHub repo to Netlify, build settings, custom domain setup, inviting skipper@v-15.org as admin, enabling GitHub OAuth for Netlify CMS).
-   - Status: Not started.
-
-## Overall Status
-- Current Subtask: 1 (Project Setup).
-- Next Immediate Steps: Resolve Tailwind init error, create remaining config files, complete directory setup.
-- Transition Plan: Upon completing a subtask, update summaries and use new_task to preload context for the next subtask.
-
-This plan will be updated as subtasks progress.
+## Next Candidates (discussed, not started)
+1. Verify production deploy is live and serving latest commits.
+2. Image weight: full-res ~2000px photos served at thumbnail sizes — resize/compress for web.
+3. Social meta: add `og:`/`twitter:` tags incl. `og:image`.
+4. Content depth: real 2026 regatta dates, buyer's-guide article, more fleet photos.
+5. Functionality: regatta card → club section anchors; search filters by type.
 
 ## Backlog
 

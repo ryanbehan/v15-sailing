@@ -23,9 +23,13 @@ This project uses Netlify for static site deployment and GitHub Actions for auto
 ---
 
 ## Directory Structure
-- `/src` - Application source code
-- `/tests` - Unit and smoke tests
-- `/doc` - Project documentation
+- `/src` - Application source code (pages, components, lib)
+- `/doc` - Site content as markdown (articles, clubs, guides, rules, contacts)
+- `/content` - Structured JSON collections (regattas, parts, parts catalog)
+- `/public` - Static assets incl. fleet photos (`images/crdc/`, `images/fleet53/`) and Decap CMS (`admin/`)
+- `/tests` - Unit (jest) and smoke (Playwright) tests
+- `/memory-bank` - Project tracking: taskPlan, projectSummary, decisionLog, contextSummary
+- `/util_scripts` - Development helper scripts
 - `.github/workflows` - CI/CD workflows
 
 ---
