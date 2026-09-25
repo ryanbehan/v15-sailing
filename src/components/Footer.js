@@ -2,6 +2,7 @@ const links = [
   { href: '/articles/', label: 'Articles' },
   { href: '/parts/', label: 'Parts' },
   { href: '/regattas/', label: 'Regattas' },
+  { href: '/gallery/', label: 'Gallery' },
   { href: '/about/', label: 'About' },
 ];
 const socials = [

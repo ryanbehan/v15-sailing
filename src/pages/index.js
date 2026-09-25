@@ -92,7 +92,8 @@ export default function Home({ articles }) {
           <a href="https://crdc.v-15.org" target="_blank" rel="noopener" className="text-sky-blue underline">
             Connetquot River Dinghy Club
           </a>
-          , Oakdale NY.
+          , Oakdale NY.{' '}
+          <Link href="/gallery" className="text-sky-blue underline">See the full gallery</Link>.
         </p>
         <div className="grid gap-4 grid-cols-2 md:grid-cols-4">
           {[

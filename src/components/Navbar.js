@@ -91,6 +91,7 @@ export default function Navbar() {
             </li>
           ))}
           <li><Link href="/regattas" className="hover:text-sky-blue">Regattas</Link></li>
+          <li><Link href="/gallery" className="hover:text-sky-blue">Gallery</Link></li>
           <li><Link href="/search" className="hover:text-sky-blue">Search</Link></li>
           <li><Link href="/about" className="hover:text-sky-blue">About</Link></li>
         </ul>
