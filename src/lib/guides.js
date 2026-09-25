@@ -27,6 +27,7 @@ export async function getGuideArticles() {
           title: data.title || slug,
           content,
           original_pdf: data.original_pdf || null,
+          source_url: data.source_url || null,
         });
       }
     }

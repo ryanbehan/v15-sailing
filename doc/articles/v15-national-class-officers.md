@@ -1,6 +1,7 @@
 ---
 title: Class Officers
 description: Historical leadership of the Vanguard 15 Class Association.
+source_url: https://web.archive.org/web/20151007214525/http://v15.org/officers/index.html
 ---
 
 # Class Officers

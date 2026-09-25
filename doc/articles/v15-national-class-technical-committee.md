@@ -1,6 +1,7 @@
 ---
 title: Technical Committee
 description: The role of the Technical Committee in maintaining the Vanguard 15 one-design rules.
+source_url: https://web.archive.org/web/20160314073446/http://v15.org/tech/index.html
 ---
 
 # Technical Committee

@@ -3,6 +3,7 @@ title: Starting Line Strategy
 description: A comprehensive guide to winning the start in a large Vanguard 15 fleet.
 author: Katie McDowell
 original_pdf: guides/racing/StartingTipsKMcDowell.pdf
+source_url: https://web.archive.org/web/20100707022157/http://www.v15.org/articles/StartingTipsKMcDowell.PDF
 ---
 
 # Starting Line Strategy

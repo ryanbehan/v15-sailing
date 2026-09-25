@@ -2,6 +2,7 @@
 title: "Eyestrap Repair"
 original_pdf: guides/maintenance/eyestrap-repair.pdf
 section: maintenance
+source_url: https://web.archive.org/web/20100707022212/http://www.v15.org/articles/Eyestrap%20Repair.PDF
 ---
 
 # The Wobbly Eyestrap: A Vanguard 15 Fix

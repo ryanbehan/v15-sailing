@@ -41,6 +41,14 @@ export default function GuideArticle({ article }) {
             </a>
           </p>
         )}
+        {article.source_url && (
+          <p className="text-sm text-gray-500">
+            Originally published on{' '}
+            <a href={article.source_url} className="underline" target="_blank" rel="noopener noreferrer">
+              v15.org (archived)
+            </a>
+          </p>
+        )}
       </article>
     </>
   );

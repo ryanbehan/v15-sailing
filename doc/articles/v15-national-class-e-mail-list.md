@@ -1,6 +1,7 @@
 ---
 title: Stay Connected
 description: How to keep in touch with the Vanguard 15 community, including forums and fleet lists.
+source_url: https://web.archive.org/web/20100707015324/http://www.v15.org/email/index.html
 ---
 
 # Stay Connected

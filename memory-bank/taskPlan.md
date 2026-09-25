@@ -33,6 +33,12 @@
 - `/gallery` sectioned per fleet; 7 Fleet 53 SF Bay photos added from vanguard15.org/photos (`ee185f7`).
 - `tailwind.config.js` content scan extended to `doc/**/*.md`.
 
+### Source attribution
+- Recovered original URLs from Wayback capture headers embedded in `v15-content/` scrapes; added `source_url` frontmatter to 16 ported pages (6 articles incl. live Medium link, 10 guides).
+- PDF-sourced guides link to archived `v15.org/articles/*.PDF` captures (verified via availability API); rules.md links archived 2013 Class Rules PDF.
+- `source_url` flows via `...data` (articles) and explicit pass-through (guides.js); both page templates render "Originally published on v15.org (archived) / Medium" links.
+- Not linked: rigging-manual (no archived v15.org source exists) and 2015 class rules (no capture).
+
 ### Dependency cleanup (`ee185f7`)
 - `npm audit` → **0 vulnerabilities** (was 29+): removed deprecated `netlify-cms-proxy-server`, npm `overrides` patched next's vendored postcss 8.4.31→8.5.28; lockfile regenerated (next@15.5.26).
 

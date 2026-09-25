@@ -1,6 +1,7 @@
 ---
 title: Class Membership
 description: Why join the Vanguard 15 Class Association?
+source_url: https://web.archive.org/web/20100707015853/http://www.v15.org/membership/index.html
 ---
 
 # V15 Class Membership

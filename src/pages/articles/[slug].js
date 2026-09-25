@@ -36,6 +36,14 @@ export default function Article({ article }) {
         ) : (
           <p className="text-xl text-gray-600">{article.description}</p>
         )}
+        {article.source_url && (
+          <p className="text-sm text-gray-500 mt-8">
+            Originally published on{' '}
+            <a href={article.source_url} className="underline" target="_blank" rel="noopener noreferrer">
+              {article.source_url.includes('medium.com') ? 'Medium' : 'v15.org (archived)'}
+            </a>
+          </p>
+        )}
       </article>
     </>
   );

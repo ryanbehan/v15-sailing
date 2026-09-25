@@ -3,6 +3,7 @@ title: Planing Upwind
 description: Techniques for getting the Vanguard 15 on a plane while sailing upwind.
 author: Pete Spaulding, Dartmouth Sailing Coach
 original_pdf: guides/racing/PlanningUpwindSpaulding.pdf
+source_url: https://web.archive.org/web/20100707022245/http://www.v15.org/articles/PlanningUpwindSpaulding.PDF
 ---
 
 # Let Loose and Plane Upwind

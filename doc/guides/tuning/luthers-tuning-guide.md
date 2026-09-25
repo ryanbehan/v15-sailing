@@ -2,6 +2,7 @@
 title: Luther's Tuning Guide
 description: Advanced tuning techniques from legendary coach Luther Carpenter, focusing on rake and tension.
 author: Luther Carpenter
+source_url: https://web.archive.org/web/20160424195047/http://www.v15.org/articles/luthtuning.html
 ---
 
 # Luther's Advanced Tuning Guide

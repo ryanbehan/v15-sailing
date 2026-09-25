@@ -1,6 +1,7 @@
 ---
 title: Historical Fleet Contacts
 description: A look back at the active Vanguard 15 fleets from the class's history.
+source_url: https://web.archive.org/web/20100707015952/http://www.v15.org/fleet/index.html
 ---
 
 # Historical Fleet Contacts

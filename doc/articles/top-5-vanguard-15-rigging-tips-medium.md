@@ -1,6 +1,7 @@
 ---
 title: Top 5 Vanguard 15 Rigging Tips
 description: In-depth tips on how to begin optimizing your new boat for better performance.
+source_url: https://medium.com/@alsargent/top-5-vanguard-15-rigging-tips-a479794689c8
 ---
 
 # Top 5 Vanguard 15 Rigging Tips

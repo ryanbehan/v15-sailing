@@ -3,6 +3,7 @@ title: Hull Reinforcements Overview
 description: Understanding the structural evolution and common reinforcements of the Vanguard 15.
 author: Vanguard Class
 original_pdf: guides/maintenance/hull-reinforcements.pdf
+source_url: https://web.archive.org/web/20100707022818/http://www.v15.org/articles/Hull%20Reinforcements.PDF
 ---
 
 # Vanguard 15 Hull Reinforcements

@@ -3,6 +3,7 @@ title: Heavy Air Crewing
 description: Six essential tips for crewing a Vanguard 15 in heavy breeze.
 author: Stan Schreyer
 original_pdf: guides/racing/HeaveAirTipsSchreyer.pdf
+source_url: https://web.archive.org/web/20100707022225/http://www.v15.org/articles/HeaveAirTipsSchreyer.PDF
 ---
 
 # Heavy-Air Crewing in a V15
