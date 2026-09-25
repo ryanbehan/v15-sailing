@@ -45,4 +45,7 @@ collections:
       - { label: Event Name, name: name, widget: string }
       - { label: Date, name: date, widget: string }
       - { label: Location, name: location, widget: string }
+      - { label: Host Club, name: host, widget: string, required: false }
+      - { label: Host Club URL, name: hostUrl, widget: string, required: false }
+      - { label: Photo, name: image, widget: image, required: false }
       - { label: Registration URL, name: url, widget: string }

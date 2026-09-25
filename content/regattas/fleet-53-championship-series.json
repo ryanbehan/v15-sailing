@@ -1,8 +1,9 @@
 {
   "name": "Fleet 53 Championship Series",
-  "date": "Weekend regattas, April\u2013October",
+  "date": "Weekend regattas, April–October",
   "location": "Various West Coast venues",
   "host": "Vanguard 15 Fleet 53",
   "hostUrl": "https://vanguard15.org/",
-  "url": "https://vanguard15.org/schedule/series1?y=2026"
+  "url": "https://vanguard15.org/schedule/series1?y=2026",
+  "image": "/images/crdc/fleet-upwind.jpg"
 }

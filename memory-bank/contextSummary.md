@@ -34,3 +34,12 @@ Verified-keep (bot-blocked, real pages): Facebook x3 (200 in browser), Kinder In
 - Deleted `doc/articles/schedule-results.md` (2005 results archive) + sitemap entry; page now 404s as intended.
 - `doc/clubs/clubs.md` rewritten to verified-active fleets only: Fleet 53, TISC, ACSC (sailalameda.org), Inverness YC, Fresno YC, Willamette, Seattle YC (13-boat training fleet), CRDC, Larchmont YC (Spring Regatta), Chicago Corinthian Fleet 67, Lake Norman YC (2023 Nationals host), HIYC, Percy Priest YC, PNW Fleet 69 mailing list. Removed NJYRA (association, no V15 fleet evidence).
 - `content/regattas/*.json` now carry `host` + `hostUrl`; new entries: V15 Nationals/PCC, Larchmont Spring Regatta, Fleet 67 Thursday Series, Fleet 67 Fall Frostbiting, Lake Norman V15 Racing. `regattas.js` renders "Host:" club links and links to the clubs page.
+
+## Photography & visual work
+
+- CRDC photos: 12 images pulled from crdc-v15.wixsite.com gallery (Facebook group is login-walled; only ~200px thumbnails public) → `public/images/crdc/` (start-lineup, frostbite-fleet, capsize-recovery, fleet-group-photo, fleet-upwind, ice-covered-boats, misty-morning, river-racing, sailors-drysuits, snowy-boatyard, clubhouse-racing, crdc-logo.webp).
+- Woven in: homepage "From the Fleets" strip (4 photos), CRDC club card (3 thumbs), `/gallery` page (all 11, captioned grid; nav + footer + sitemap links). `tailwind.config.js` content scan now includes `doc/**/*.md` so utility classes inside markdown HTML blocks generate CSS.
+- Logo: authentic `v15_logo_small.gif` from `v15-content/v15-oldsite/` → `public/images/v15-logo.png`; navbar emblem + favicon. Stale SVGs deleted. Navbar header is `relative z-50` so dropdowns clear the homepage hero.
+- Homepage "The Vanguard 15" section image → `/images/crdc/start-lineup.jpg`.
+- Regatta cards: `image` field added to all 12 `content/regattas/*.json` (image + imageAlt also editable in `public/admin/config.yml`); `regattas.js` renders lazy-loaded thumbnails w/ `object-cover`, falls back cleanly when absent.
+- Merged to `main` and pushed through commit `f825f0f`+ (gallery `86fc2cf`).

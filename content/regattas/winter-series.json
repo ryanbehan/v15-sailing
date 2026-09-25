@@ -1,8 +1,9 @@
 {
   "name": "Winter Series",
-  "date": "Select Sundays, January\u2013March",
+  "date": "Select Sundays, January–March",
   "location": "Alameda Community Sailing Center, Alameda, CA",
   "host": "Alameda Community Sailing Center",
   "hostUrl": "https://www.sailalameda.org",
-  "url": "https://vanguard15.org/schedule/"
+  "url": "https://vanguard15.org/schedule/",
+  "image": "/images/crdc/misty-morning.jpg"
 }

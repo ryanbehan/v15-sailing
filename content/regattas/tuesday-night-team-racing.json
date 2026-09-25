@@ -1,8 +1,9 @@
 {
   "name": "Tuesday Night Team Racing",
-  "date": "Tuesdays, April\u2013September",
+  "date": "Tuesdays, April–September",
   "location": "Treasure Island Sailing Center, San Francisco, CA",
   "host": "Vanguard 15 Fleet 53",
   "hostUrl": "https://vanguard15.org/",
-  "url": "https://vanguard15.org/schedule/series3?y=2026"
+  "url": "https://vanguard15.org/schedule/series3?y=2026",
+  "image": "/images/v15_racing.jpg"
 }

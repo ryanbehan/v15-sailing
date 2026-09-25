@@ -20,21 +20,26 @@ export default function Regattas({ regattas }) {
       </p>
       <ul className="space-y-4 prose">
         {regattas.map((r) => (
-          <li key={r.url} className="border p-4 rounded-md hover:bg-gray-50">
-            <div className="flex justify-between items-center">
-              <div>
-                <h2 className="text-lg font-semibold">{r.name}</h2>
-                <p className="text-sm text-gray-600">{r.location}{r.date ? ` — ${r.date}` : ''}</p>
-                {r.host && (
-                  <p className="text-sm text-gray-600">
-                    Host:{' '}
-                    <a href={r.hostUrl} target="_blank" rel="noopener" className="text-sky-blue underline">
-                      {r.host}
-                    </a>
-                  </p>
-                )}
+          <li key={r.url} className="border rounded-md hover:bg-gray-50 overflow-hidden">
+            <div className="flex items-center gap-4">
+              {r.image && (
+                <img src={r.image} alt="" className="w-32 h-24 sm:w-40 sm:h-28 object-cover flex-shrink-0" loading="lazy" />
+              )}
+              <div className="flex justify-between items-center flex-1 p-4">
+                <div>
+                  <h2 className="text-lg font-semibold">{r.name}</h2>
+                  <p className="text-sm text-gray-600">{r.location}{r.date ? ` — ${r.date}` : ''}</p>
+                  {r.host && (
+                    <p className="text-sm text-gray-600">
+                      Host:{' '}
+                      <a href={r.hostUrl} target="_blank" rel="noopener" className="text-sky-blue underline">
+                        {r.host}
+                      </a>
+                    </p>
+                  )}
+                </div>
+                <a href={r.url} target="_blank" rel="noopener" className="text-sky-blue underline text-sm flex-shrink-0">Details</a>
               </div>
-              <a href={r.url} target="_blank" rel="noopener" className="text-sky-blue underline text-sm">Details</a>
             </div>
           </li>
         ))}

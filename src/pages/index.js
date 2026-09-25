@@ -50,8 +50,8 @@ export default function Home({ articles }) {
 
       <section className="max-w-6xl mx-auto px-4 py-16 grid gap-8 md:grid-cols-2 items-center">
         <img
-          src="/images/v15_racing.jpg"
-          alt="Vanguard 15s racing on San Francisco Bay"
+          src="/images/crdc/start-lineup.jpg"
+          alt="Vanguard 15s lined up at a race start, Connetquot River"
           className="rounded-xl shadow-lg w-full object-cover"
         />
         <div>

@@ -1,8 +1,9 @@
 {
   "name": "Thursday Night Series",
-  "date": "Thursdays, April\u2013September",
+  "date": "Thursdays, April–September",
   "location": "Treasure Island Sailing Center, San Francisco, CA",
   "host": "Vanguard 15 Fleet 53",
   "hostUrl": "https://vanguard15.org/",
-  "url": "https://vanguard15.org/schedule/series2?y=2026"
+  "url": "https://vanguard15.org/schedule/series2?y=2026",
+  "image": "/images/v15s.jpg"
 }
