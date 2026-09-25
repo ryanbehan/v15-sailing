@@ -56,3 +56,15 @@ The project is divided into 7 subtasks to optimize token usage and maintain focu
 - Transition Plan: Upon completing a subtask, update summaries and use new_task to preload context for the next subtask.
 
 This plan will be updated as subtasks progress.
+
+## Backlog
+
+### CMS editing via Netlify Identity + Git Gateway — DEFERRED (2026-09, user decision)
+Decap CMS files exist at `public/admin/` and `config.yml` is already `backend: name: git-gateway`,
+but the CMS is intentionally not active. /admin/ will load the UI but cannot save until enabled.
+To activate later (Netlify dashboard only, no code changes needed):
+1. app.netlify.com → site → Identity → Enable
+2. Identity → Services → Git Gateway → Enable
+3. Identity → Invite users (editors need no GitHub account; commits land on `main` and redeploy)
+Optional: enable external OAuth providers (Google/GitHub) for editor login.
+If unused long-term, consider deleting `public/admin/` and the CSP exception in netlify.toml.
