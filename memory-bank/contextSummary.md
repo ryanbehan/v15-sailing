@@ -42,4 +42,7 @@ Verified-keep (bot-blocked, real pages): Facebook x3 (200 in browser), Kinder In
 - Logo: authentic `v15_logo_small.gif` from `v15-content/v15-oldsite/` → `public/images/v15-logo.png`; navbar emblem + favicon. Stale SVGs deleted. Navbar header is `relative z-50` so dropdowns clear the homepage hero.
 - Homepage "The Vanguard 15" section image → `/images/crdc/start-lineup.jpg`.
 - Regatta cards: `image` field added to all 12 `content/regattas/*.json` (image + imageAlt also editable in `public/admin/config.yml`); `regattas.js` renders lazy-loaded thumbnails w/ `object-cover`, falls back cleanly when absent.
-- Merged to `main` and pushed through commit `f825f0f`+ (gallery `86fc2cf`).
+- Merged to `main` and pushed through commit `f825f0f`+ (gallery `86fc2cf`, regatta thumbnails `721383f`).
+- Gallery is now sectioned per fleet (`sections` array in gallery.js): Fleet 53 (7 photos from vanguard15.org/photos/, full-res `N.jpg` pattern; thumbnails `N_tmb.jpg`, mid `N_400.jpg`) + CRDC (11). Fleet 53 has 64 numbered galleries (2004–2019 era).
+- npm audit: **0 vulnerabilities**. Removed deprecated `netlify-cms-proxy-server` (dev-only; modern equivalent is `npx decap-server`); added npm `overrides` forcing next's vendored postcss → ^8.5.23 (lockfile regenerated; next@15.5.26). Next 16 upgrade would fix natively but is breaking (React 19).
+- CMS ready for Git Gateway: config.yml already `backend: name: git-gateway`. Remaining is Netlify dashboard only: Identity → Enable, Identity → Services → Git Gateway → Enable, then invite editors.

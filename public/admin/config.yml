@@ -1,4 +1,4 @@
-# For local editing, run `npx netlify-cms-proxy-server` and uncomment:
+# For local editing, run `npx decap-server` and uncomment:
 # local_backend: true
 backend:
   name: git-gateway
