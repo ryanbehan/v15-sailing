@@ -15,6 +15,14 @@ Here are some ideas, all oriented to our San Francisco V15 fleet’s racing cond
 > [!NOTE]
 > I encourage you to contact Svendsens, our longtime fleet sponsor, to purchase the items below. However, since SvendsensMarine.com doesn’t have pages specific to Vanguard 15 gear, I’ve linked to other websites for illustrative purposes. I’ve found Svendsens to be very responsive. As of this writing (March 2014) our main contact there is Matt Ford.
 
+**Read the full guides** — expanded versions of each tip with photos and updated part links:
+
+1. [Shroud Adjusters (Stamasters)](/guides/rigging/stamaster-shroud-adjusters/)
+2. [Boom Vang Upgrade](/guides/rigging/boom-vang-upgrade/)
+3. [Telltale Placement](/guides/rigging/telltale-placement/)
+4. [Shockcord Placement](/guides/rigging/shockcord-placement/)
+5. [Jib Halyard Upgrade](/guides/rigging/jib-halyard-upgrade/)
+
 ## Tip #1: Stamasters
 
 Having your rake adjusted properly is critical for breaking away on the starting line. The stock Vanguard 15 shroud adjusters provide a number of barriers to getting the right rake.

@@ -45,7 +45,7 @@ export default function GuideArticle({ article }) {
           <p className="text-sm text-gray-500">
             Originally published on{' '}
             <a href={article.source_url} className="underline" target="_blank" rel="noopener noreferrer">
-              v15.org (archived)
+              {article.source_url.includes('medium.com') ? 'Medium' : 'v15.org (archived)'}
             </a>
           </p>
         )}

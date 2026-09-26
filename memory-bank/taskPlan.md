@@ -39,6 +39,11 @@
 - `source_url` flows via `...data` (articles) and explicit pass-through (guides.js); both page templates render "Originally published on v15.org (archived) / Medium" links.
 - Not linked: rigging-manual (no archived v15.org source exists) and 2015 class rules (no capture).
 
+### Rigging tips split into standalone guides
+- Split Al Sargent's Medium article into 5 guides under `doc/guides/rigging/`: stamaster-shroud-adjusters, boom-vang-upgrade, telltale-placement, shockcord-placement, jib-halyard-upgrade. Full original detail restored (port had trimmed ~30%) + all 13 instructional photos pulled from Wayback (`public/images/guides/rigging/`).
+- Researched + updated every product link: dead `productdetail.aspx` Harken URLs → current `/en/shop/` pages (304/404/405/244 verified); Ronstan RF78 → ronstan.com swivel page; Wichard → marine.wichard.com; Yale Ultrex/Vectrus → yalecordage.com; APS elastomer → WCS shockcord; Sta-Master → velasailingsupply.com; Clamcleat CL211 → clamcleat.com; 3M rigging-tape portal → boatoutfitters.com; Amazon links all still valid. Source label in guide/article templates now shows "Medium" vs "v15.org (archived)" by domain.
+- Umbrella article links all 5 guides.
+
 ### Dependency cleanup (`ee185f7`)
 - `npm audit` → **0 vulnerabilities** (was 29+): removed deprecated `netlify-cms-proxy-server`, npm `overrides` patched next's vendored postcss 8.4.31→8.5.28; lockfile regenerated (next@15.5.26).
 
