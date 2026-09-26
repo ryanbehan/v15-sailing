@@ -26,11 +26,12 @@ async function getMarkdownArticles() {
         const raw = await fs.readFile(fullPath, 'utf-8');
         const { data, content } = matter(raw);
         const slug = path.basename(file, '.md');
+        const body = content.replace(/^\s*#\s+[^\n]*\n/, ''); // strip in-body H1 — template renders the title
         articles.push({
           url: slug, // Using slug as url for consistency with JSON articles
           title: data.title || slug,
           description: data.description || '',
-          content,
+          content: body,
           format: 'markdown', // Flag to indicate markdown content
           ...data,
         });

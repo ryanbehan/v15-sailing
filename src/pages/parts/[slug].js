@@ -15,7 +15,7 @@ export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), 'doc', 'parts', `${params.slug}.md`);
   const raw = fs.readFileSync(filePath, 'utf8');
   const { content, data } = matter(raw);
-  return { props: { content, title: data.title || params.slug } };
+  return { props: { content: content.replace(/^\s*#\s+[^\n]*\n/, ''), title: data.title || params.slug } };
 }
 
 export default function PartCategory({ title, content }) {
