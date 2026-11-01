@@ -12,7 +12,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "deploy:cf": "npm run build && wrangler pages deploy out --project-name v15-sailing --branch main"
+    "deploy:cf": "npm run build && wrangler deploy"
   },
   "repository": {
     "type": "git",
