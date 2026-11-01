@@ -49,7 +49,7 @@
 
 ## Current Status
 - Everything merged to `main` and pushed through `858d220`. Site builds clean (43 pages), all tests pass, local preview on :8931.
-- **Not yet verified:** production deploy state at v-15.org / Netlify URL.
+- **Done 2026-11-01:** hosting migrated to Cloudflare Pages; live at https://v15-sailing.pages.dev and dev.v-15.org (pending CNAME cutover).
 
 ## Next Candidates (discussed, not started)
 1. Verify production deploy is live and serving latest commits.
@@ -60,12 +60,9 @@
 
 ## Backlog
 
-### CMS editing via Netlify Identity + Git Gateway — DEFERRED (2026-09, user decision)
-Decap CMS files exist at `public/admin/` and `config.yml` is already `backend: name: git-gateway`,
-but the CMS is intentionally not active. /admin/ will load the UI but cannot save until enabled.
-To activate later (Netlify dashboard only, no code changes needed):
-1. app.netlify.com → site → Identity → Enable
-2. Identity → Services → Git Gateway → Enable
-3. Identity → Invite users (editors need no GitHub account; commits land on `main` and redeploy)
-Optional: enable external OAuth providers (Google/GitHub) for editor login.
-If unused long-term, consider deleting `public/admin/` and the CSP exception in netlify.toml.
+### CMS editing — ORPHANED after Cloudflare Pages migration (2026-11)
+Decap CMS files exist at `public/admin/` with `backend: git-gateway`, which required
+Netlify Identity — no longer available now that hosting moved to Cloudflare Pages.
+/admin/ will load but cannot save. Options if CMS is wanted later: switch backend to
+`github` (editors need GitHub accounts) or a self-hosted OAuth gateway; otherwise
+delete `public/admin/` and the `/admin/*` CSP exception in `public/_headers`.

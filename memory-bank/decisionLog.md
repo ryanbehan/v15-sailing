@@ -28,3 +28,5 @@ This log captures key decisions made during the project, including rationale and
 - **[2026-09]**: Netlify Identity + Git Gateway **deferred by owner** — CMS present but inactive; activation steps in taskPlan.md Backlog.
 
 This log will be updated with new decisions as the project progresses.
+
+- **[2026-11-01]**: Migrated hosting Netlify → Cloudflare Pages (`v15-sailing` project, direct-upload deploys via `npm run deploy:cf` / `wrangler pages deploy out`). Rationale: owner preference; Pages serves the same static `out/` export, security headers ported to `public/_headers`. `netlify.toml` removed. `dev.v-15.org` repointed via CNAME in Google Cloud DNS (zone is NOT on Cloudflare; apex/www actually run on Squarespace). Consequence: Netlify Identity/Git Gateway CMS path is now moot — `public/admin/` retained but orphaned; remove if CMS stays unused.
