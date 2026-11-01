@@ -49,7 +49,7 @@
 
 ## Current Status
 - Everything merged to `main` and pushed through `858d220`. Site builds clean (43 pages), all tests pass, local preview on :8931.
-- **Done 2026-11-01:** hosting migrated to Cloudflare Pages; live at https://v15-sailing.pages.dev and dev.v-15.org (pending CNAME cutover).
+- **Done 2026-11-01:** hosting migrated to Cloudflare Workers Static Assets — LIVE at https://dev.v-15.org (custom domain verified, cert issued) and https://v15-sailing.southbay82.workers.dev. Zone v-15.org now on Cloudflare DNS; apex/www remain on Squarespace.
 
 ## Next Candidates (discussed, not started)
 1. Verify production deploy is live and serving latest commits.
