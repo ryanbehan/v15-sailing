@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Seo from '../../../components/Seo';
 import { useRouter } from 'next/router';
 import { getGuideArticles, getArticle } from '../../../lib/guides';
 
@@ -12,9 +12,13 @@ export default function GuideArticle({ article }) {
 
   return (
     <>
-      <Head>
-        <title>{`${article.title} | V-15 Guides`}</title>
-      </Head>
+      <Seo
+        title={article.title}
+        description={article.description || article.content}
+        path={`/guides/${article.section}/${article.slug}/`}
+        type="Article"
+        sourceUrl={article.source_url}
+      />
       <article className="prose prose-invert mx-auto py-8">
         <h1>{article.title}</h1>
         <Markdown

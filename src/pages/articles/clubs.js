@@ -1,5 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
+import Seo from '../../components/Seo';
+import SectionHeading from '../../components/SectionHeading';
 import fs from 'fs';
 import path from 'path';
 import Markdown from '../../components/Markdown';
@@ -25,9 +26,12 @@ export async function getStaticProps() {
 export default function Clubs({ clubs }) {
   return (
     <>
-      <Head>
-        <title>Clubs | V-15 Sailing</title>
-      </Head>
+      <Seo
+        title="Vanguard 15 Clubs & Fleets"
+        description="Find Vanguard 15 clubs by region. CRDC and Alameda Community Sailing Center are community-confirmed active; other listings await activity verification."
+        path="/articles/clubs/"
+        type="CollectionPage"
+      />
       <div className="prose prose-invert mx-auto py-8">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Index / Clubs</p>
         <h1>Vanguard 15 Clubs</h1>
@@ -39,7 +43,7 @@ export default function Clubs({ clubs }) {
         <div className="space-y-4">
           {clubs.map(({ title, body }) => (
             <div key={title} className="border border-white/10 bg-panel p-5 transition">
-              <h2>{title}</h2>
+              <SectionHeading>{title}</SectionHeading>
               <Markdown
                 content={body}
                 components={{

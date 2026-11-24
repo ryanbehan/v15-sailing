@@ -13,7 +13,7 @@ const customJestConfig = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(png|jpg|jpeg|gif|svg|webp)$': '<rootDir>/__mocks__/fileMock.js',
   },
-  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/tests/playwright/', '/tests/smoke/'],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/tests/playwright/', '/tests/smoke/', '/tests/edge/'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
 

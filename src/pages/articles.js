@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Seo from '../components/Seo';
 import Link from 'next/link';
 
 import { getArticles } from '../lib/content';
@@ -6,9 +6,12 @@ import { getArticles } from '../lib/content';
 export default function Articles({ articles }) {
   return (
     <>
-      <Head>
-        <title>Articles | V-15 Sailing</title>
-      </Head>
+      <Seo
+        title="Vanguard 15 Articles & Class Resources"
+        description="Browse Vanguard 15 class history, archived contacts, membership information, and sailing articles, with links to clubs, rules, and boat resources."
+        path="/articles/"
+        type="CollectionPage"
+      />
       <div className="py-8">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Index / Articles</p>
         <h1 className="text-4xl font-black uppercase tracking-tight mb-8">Articles</h1>

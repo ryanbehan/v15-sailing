@@ -1,12 +1,15 @@
-import Head from 'next/head';
+import Seo from '../components/Seo';
 import { getParts } from '../lib/content';
 
 export default function Parts({ parts }) {
   return (
     <>
-      <Head>
-        <title>Parts | V-15 Sailing</title>
-      </Head>
+      <Seo
+        title="Vanguard 15 Parts & Vendors"
+        description="Find replacement Vanguard 15 sailing parts, browse the parts finder, and explore rigging, hardware, sails, spars, and vendor resources."
+        path="/parts/"
+        type="CollectionPage"
+      />
       <div className="py-8">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Index / Parts</p>
         <h1 className="text-4xl font-black uppercase tracking-tight mb-8">Parts Recommendations</h1>

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Seo from '../../components/Seo';
 import Link from 'next/link';
 import { getSections } from '../../lib/guides';
 
@@ -10,9 +10,12 @@ export async function getStaticProps() {
 export default function GuidesIndex({ sections }) {
   return (
     <>
-      <Head>
-        <title>Guides | V-15 Sailing</title>
-      </Head>
+      <Seo
+        title="Vanguard 15 Guides"
+        description="Read Vanguard 15 rigging, tuning, racing, maintenance, and fleet-development guides, including practical boat setup and repair resources."
+        path="/guides/"
+        type="CollectionPage"
+      />
       <div className="prose prose-invert mx-auto py-8">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Index / Guides</p>
         <h1>Vanguard 15 Guides</h1>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import Seo from '../../components/Seo';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -15,9 +15,11 @@ export async function getStaticProps() {
 export default function Rules({ content }) {
   return (
     <>
-      <Head>
-        <title>Class Rules | V-15 Sailing</title>
-      </Head>
+      <Seo
+        title="Vanguard 15 Class Rules"
+        description="Read the archived 2015 and 2013 Vanguard 15 class rules, download the original PDFs, and check the latest rules before entering an official event."
+        path="/articles/rules/"
+      />
       <div className="prose prose-invert mx-auto py-8">
         <Markdown content={content} />
       </div>

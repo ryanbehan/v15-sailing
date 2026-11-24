@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Seo from '../../../components/Seo';
 import Link from 'next/link';
 import { getArticlesBySection } from '../../../lib/guides';
 
@@ -22,9 +22,12 @@ export default function GuidesSection({ section, articles }) {
   const display = `${title.charAt(0).toUpperCase() + title.slice(1)} Guides`;
   return (
     <>
-      <Head>
-        <title>{`${display} | V-15 Sailing`}</title>
-      </Head>
+      <Seo
+        title={`Vanguard 15 ${display}`}
+        description={`Explore Vanguard 15 ${title} guides: ${articles.map((article) => article.title).join(', ')}.`}
+        path={`/guides/${section}/`}
+        type="CollectionPage"
+      />
       <div className="prose prose-invert mx-auto py-8">
         <h1>{display}</h1>
       <div className="space-y-3">

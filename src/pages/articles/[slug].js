@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Seo from '../../components/Seo';
 import { useRouter } from 'next/router';
 import Markdown from '../../components/Markdown';
 import { getArticles } from '../../lib/content';
@@ -19,9 +19,13 @@ export default function Article({ article }) {
 
   return (
     <>
-      <Head>
-        <title>{`${article.title} | V-15 Sailing`}</title>
-      </Head>
+      <Seo
+        title={article.title}
+        description={article.description || article.content}
+        path={`/articles/${article.url}/`}
+        type="Article"
+        sourceUrl={article.source_url}
+      />
       <article className="prose prose-lg prose-invert mx-auto px-4 py-8 max-w-4xl">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Article</p>
         <h1 className="text-4xl font-black uppercase tracking-tight mb-6">{article.title}</h1>

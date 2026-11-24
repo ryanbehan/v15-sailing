@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Seo from '../../components/Seo';
 import { useState } from 'react';
 import PartCard from '../../components/PartCard';
 import partsData from '../../../content/parts-catalog.json';
@@ -19,9 +19,12 @@ export default function PartsCatalog() {
 
     return (
         <>
-            <Head>
-                <title>Parts Finder | V-15 Sailing</title>
-            </Head>
+            <Seo
+                title="Vanguard 15 Parts Finder"
+                description="Search the Vanguard 15 parts catalog by name or part number, filter by category, and compare replacement hardware and rigging options from vendors."
+                path="/parts/catalog/"
+                type="CollectionPage"
+            />
 
             <div className="container mx-auto px-4 py-8">
                 <div className="text-center mb-12">

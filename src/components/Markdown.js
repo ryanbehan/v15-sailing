@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import rehypeSlug from 'rehype-slug';
 
 const ALERTS = { NOTE: 'Note', TIP: 'Tip', IMPORTANT: 'Important', WARNING: 'Warning', CAUTION: 'Caution' };
 
@@ -9,6 +10,7 @@ function normalizeAlerts(markdown) {
 }
 
 const defaultComponents = {
+  img: ({ node, ...props }) => <img loading="lazy" decoding="async" {...props} />,
   table: ({ node, ...props }) => (
     <div className="overflow-x-auto">
       <table {...props} />
@@ -18,7 +20,7 @@ const defaultComponents = {
 
 export default function Markdown({ content, components }) {
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={{ ...defaultComponents, ...components }}>
+    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, [rehypeSlug, { prefix: 'section-' }]]} components={{ ...defaultComponents, ...components }}>
       {normalizeAlerts(content)}
     </ReactMarkdown>
   );

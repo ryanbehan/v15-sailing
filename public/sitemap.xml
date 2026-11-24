@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://v-15.org/</loc><priority>1.0</priority></url>
+  <url><loc>https://v-15.org/</loc></url>
   <url><loc>https://v-15.org/about/</loc></url>
   <url><loc>https://v-15.org/articles/</loc></url>
   <url><loc>https://v-15.org/articles/clubs/</loc></url>
@@ -13,6 +13,7 @@
   <url><loc>https://v-15.org/articles/v15-national-class-membership/</loc></url>
   <url><loc>https://v-15.org/articles/v15-national-class-officers/</loc></url>
   <url><loc>https://v-15.org/articles/v15-national-class-technical-committee/</loc></url>
+  <url><loc>https://v-15.org/gallery/</loc></url>
   <url><loc>https://v-15.org/guides/</loc></url>
   <url><loc>https://v-15.org/guides/fleet-development/</loc></url>
   <url><loc>https://v-15.org/guides/fleet-development/tips/</loc></url>
@@ -26,7 +27,12 @@
   <url><loc>https://v-15.org/guides/racing/planningupwindspaulding/</loc></url>
   <url><loc>https://v-15.org/guides/racing/startingtipskmcdowell/</loc></url>
   <url><loc>https://v-15.org/guides/rigging/</loc></url>
+  <url><loc>https://v-15.org/guides/rigging/boom-vang-upgrade/</loc></url>
+  <url><loc>https://v-15.org/guides/rigging/jib-halyard-upgrade/</loc></url>
   <url><loc>https://v-15.org/guides/rigging/rigging-manual/</loc></url>
+  <url><loc>https://v-15.org/guides/rigging/shockcord-placement/</loc></url>
+  <url><loc>https://v-15.org/guides/rigging/stamaster-shroud-adjusters/</loc></url>
+  <url><loc>https://v-15.org/guides/rigging/telltale-placement/</loc></url>
   <url><loc>https://v-15.org/guides/tuning/</loc></url>
   <url><loc>https://v-15.org/guides/tuning/luthers-tuning-guide/</loc></url>
   <url><loc>https://v-15.org/guides/tuning/mainsheettrim/</loc></url>
@@ -39,6 +45,4 @@
   <url><loc>https://v-15.org/parts/spars/</loc></url>
   <url><loc>https://v-15.org/parts/vendors/</loc></url>
   <url><loc>https://v-15.org/regattas/</loc></url>
-  <url><loc>https://v-15.org/gallery/</loc></url>
-  <url><loc>https://v-15.org/search/</loc></url>
 </urlset>

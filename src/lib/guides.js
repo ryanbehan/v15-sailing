@@ -25,6 +25,7 @@ export async function getGuideArticles() {
           section,
           slug,
           title: data.title || slug,
+          description: data.description || '',
           content: content.replace(/^\s*#\s+[^\n]*\n/, ''), // strip in-body H1 — template renders the title
           original_pdf: data.original_pdf || null,
           source_url: data.source_url || null,

@@ -3,6 +3,10 @@ name: Post-Deploy Smoke Tests
 on:
   repository_dispatch:
     types: [netlify-post-deploy]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   smoke-test:
@@ -10,16 +14,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: npm
       - name: Install dependencies
-        run: npm ci
+        run: make install-ci
+      - name: Run unit checks
+        run: make test
       - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
-      - name: Run Playwright smoke tests
-        run: npx playwright test tests/smoke --reporter=dot
+        run: make install-browser-ci
+      - name: Run browser and SEO checks
+        run: make test-smoke
         env:
           BASE_URL: https://dev.v-15.org
+      - name: Verify public delivery and indexing boundaries
+        run: make test-routing WORKER_URL=https://v-15.org
+      - name: Verify public HTTP canonical redirects
+        run: make test-routing WORKER_URL=http://v-15.org ROUTING_ARGS=--grep=canonical-host

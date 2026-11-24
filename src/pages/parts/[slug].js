@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Seo from '../../components/Seo';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -15,15 +15,17 @@ export async function getStaticProps({ params }) {
   const filePath = path.join(process.cwd(), 'doc', 'parts', `${params.slug}.md`);
   const raw = fs.readFileSync(filePath, 'utf8');
   const { content, data } = matter(raw);
-  return { props: { content: content.replace(/^\s*#\s+[^\n]*\n/, ''), title: data.title || params.slug } };
+  return { props: { content: content.replace(/^\s*#\s+[^\n]*\n/, ''), title: data.title || params.slug, slug: params.slug } };
 }
 
-export default function PartCategory({ title, content }) {
+export default function PartCategory({ title, content, slug }) {
   return (
     <>
-      <Head>
-        <title>{`${title} | V-15 Sailing`}</title>
-      </Head>
+      <Seo
+        title={`Vanguard 15 ${title}`}
+        description={content}
+        path={`/parts/${slug}/`}
+      />
       <div className="prose prose-invert mx-auto py-8">
         <h1>{title}</h1>
         <Markdown content={content} />

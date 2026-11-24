@@ -1,4 +1,5 @@
 import React, { useId, useState } from 'react';
+import SectionHeading from './SectionHeading';
 
 export default function PartCard({ part }) {
     const [showVendors, setShowVendors] = useState(false);
@@ -8,7 +9,7 @@ export default function PartCard({ part }) {
         <div className="bg-panel border border-white/10 p-6 hover:border-signal transition-colors duration-300">
             <div className="flex flex-wrap gap-3 justify-between items-start mb-4">
                 <div>
-                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">{part.name}</h3>
+                    <SectionHeading as="h3" anchor={`part-${part.id}`} className="text-xl font-bold uppercase tracking-wide text-white">{part.name}</SectionHeading>
                     <span className="font-mono text-xs text-white/60">ID: {part.id}</span>
                 </div>
                 <span className="px-3 py-1 border border-signal text-signal font-mono text-[10px] uppercase tracking-[0.2em]">

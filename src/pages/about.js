@@ -1,11 +1,14 @@
-import Head from 'next/head';
+import Seo from '../components/Seo';
 
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About | V-15 Sailing</title>
-      </Head>
+      <Seo
+        title="About This Volunteer-Supported Site"
+        description="Learn about this Vanguard 15 resource, supported by Connetquot River Dinghy Club volunteers in New York, and send corrections or updates."
+        path="/about/"
+        type="AboutPage"
+      />
       <div className="max-w-3xl py-8">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Info // About</p>
         <h1 className="text-4xl font-black uppercase tracking-tight mb-6">About V-15 Sailing</h1>

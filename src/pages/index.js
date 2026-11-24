@@ -1,4 +1,5 @@
-import Head from 'next/head';
+import Seo from '../components/Seo';
+import SectionHeading from '../components/SectionHeading';
 import Link from 'next/link';
 import { getArticles } from '../lib/content';
 
@@ -28,15 +29,19 @@ const sections = [
 export default function Home({ articles }) {
   return (
     <>
-      <Head>
-        <title>V-15 Sailing | Vanguard 15 Class Resources</title>
-        <meta name="description" content="Resources, parts, and regatta info for Vanguard 15 sailors" />
-      </Head>
+      <Seo
+        title="Vanguard 15 Sailing Resources"
+        description="Find Vanguard 15 sailing clubs, rigging and tuning guides, replacement parts, class resources, and regatta information from the V15 community."
+        path="/"
+      />
       <div className="bg-ink text-white">
         <section className="relative overflow-hidden border-b-4 border-signal">
           <img
             src="/images/fleet53/hiking-upwind.jpg"
             alt="Vanguard 15 crew hiking hard upwind"
+            fetchpriority="high"
+            loading="eager"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover object-right"
           />
           <div className="absolute inset-0 race-hero-shade" />
@@ -65,7 +70,7 @@ export default function Home({ articles }) {
 
         <section className="max-w-6xl mx-auto px-6 py-14">
           <div className="grid gap-8 md:grid-cols-[1fr_2fr] items-start">
-            <h2 className="text-xs font-mono tracking-[0.3em] uppercase text-signal pt-2">Index / Resources</h2>
+            <SectionHeading className="text-xs font-mono tracking-[0.3em] uppercase text-signal pt-2">Index / Resources</SectionHeading>
             <div className="grid sm:grid-cols-2 gap-x-10">
               {sections.map((s, i) => (
                 <Link key={s.href} href={s.href} className="group border-t border-white/15 py-5 flex gap-4">
@@ -81,7 +86,7 @@ export default function Home({ articles }) {
         </section>
 
         <section className="max-w-6xl mx-auto px-6 pb-14 grid gap-8 md:grid-cols-[1fr_2fr] items-start">
-          <h2 className="text-xs font-mono tracking-[0.3em] uppercase text-signal pt-2">The Boat</h2>
+          <SectionHeading className="text-xs font-mono tracking-[0.3em] uppercase text-signal pt-2">The Boat</SectionHeading>
           <div className="text-lg text-white/70 font-light space-y-4">
             <p>
               A fast, strict one-design two-person dinghy with an active racing community.
@@ -100,7 +105,7 @@ export default function Home({ articles }) {
         <section className="border-y border-white/10">
           <div className="max-w-6xl mx-auto px-6 py-14">
             <div className="flex items-baseline justify-between mb-6">
-              <h2 className="text-xs font-mono tracking-[0.3em] uppercase text-signal">From the Fleets</h2>
+              <SectionHeading className="text-xs font-mono tracking-[0.3em] uppercase text-signal">From the Fleets</SectionHeading>
               <Link href="/gallery" className="font-mono text-xs uppercase tracking-[0.2em] text-white/60 hover:text-signal transition">
                 Full gallery →
               </Link>
@@ -119,14 +124,14 @@ export default function Home({ articles }) {
                 { src: '/images/crdc/capsize-recovery.jpg', alt: 'Sailor righting a capsized V15' },
                 { src: '/images/crdc/fleet-group-photo.jpg', alt: 'CRDC fleet sailors on shore' },
               ].map((img) => (
-                <img key={img.src} src={img.src} alt={img.alt} className="w-full h-40 md:h-48 object-cover" style={{ objectPosition: img.position || 'center' }} />
+                <img key={img.src} src={img.src} alt={img.alt} className="w-full h-40 md:h-48 object-cover" style={{ objectPosition: img.position || 'center' }} loading="lazy" decoding="async" />
               ))}
             </div>
           </div>
         </section>
 
         <section className="max-w-6xl mx-auto px-6 py-14 grid gap-8 md:grid-cols-[1fr_2fr]">
-          <h2 className="text-xs font-mono tracking-[0.3em] uppercase text-signal pt-2">Latest / Articles</h2>
+          <SectionHeading className="text-xs font-mono tracking-[0.3em] uppercase text-signal pt-2">Latest / Articles</SectionHeading>
           <ul className="divide-y divide-white/10">
             {articles.map((a, i) => (
               <li key={a.url}>

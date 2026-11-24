@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
-import Head from 'next/head';
+import Seo from '../components/Seo';
 import lunr from 'lunr';
 import { getAllContent } from '../lib/content';
 
@@ -35,9 +35,12 @@ export default function Search({ docs }) {
 
   return (
     <>
-      <Head>
-        <title>Search | V-15 Sailing</title>
-      </Head>
+      <Seo
+        title="Search Vanguard 15 Resources"
+        description="Search Vanguard 15 sailing articles, parts, and regatta information in this community-supported resource library."
+        path="/search/"
+        noindex
+      />
       <div className="py-8">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Query / Search</p>
         <h1 className="text-4xl font-black uppercase tracking-tight mb-6">Search</h1>
