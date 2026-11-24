@@ -42,7 +42,7 @@ export default function Home({ articles }) {
           <div className="absolute inset-0 race-hero-shade" />
           <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-24">
             <div className="flex items-center gap-3 text-signal text-xs font-mono tracking-[0.3em] uppercase mb-6">
-              <img src="/images/vanguard-15-logo.png" alt="Vanguard 15 logo" width="390" height="291" className="w-20 md:w-24 h-auto shrink-0 drop-shadow-[0_0_1px_rgba(255,255,255,0.95)]" />
+              <img src="/images/vanguard-15-logo.png" alt="Vanguard 15 logo" width="390" height="291" className="w-[68px] md:w-[82px] h-auto shrink-0 drop-shadow-[0_0_1px_rgba(255,255,255,0.95)]" />
               <span>Vanguard 15<br />Community Resources</span>
             </div>
             <h1 className="text-6xl md:text-8xl font-black uppercase leading-[0.92] tracking-tight max-w-4xl">

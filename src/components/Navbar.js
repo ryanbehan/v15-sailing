@@ -49,7 +49,7 @@ function Logo() {
         alt="Vanguard 15 logo"
         width="390"
         height="291"
-        className="h-16 w-auto drop-shadow-[0_0_1px_rgba(255,255,255,0.95)]"
+        className="h-[54px] w-auto drop-shadow-[0_0_1px_rgba(255,255,255,0.95)]"
       />
       <span className="text-xl font-black uppercase tracking-tight">
         V-15<span className="text-race-red"> Sailing</span>
