@@ -8,7 +8,7 @@ A volunteer-supported Vanguard 15 community resource with sailing guides, histor
 
 - Next.js 15.5.29 static export, React 18, and Tailwind CSS 3 produce out/.
 - Cloudflare Worker v15-sailing serves the export through Workers Static Assets. wrangler.jsonc declares the existing apex/www routes, shared dev custom domain, asset binding, and sampled native logs/traces.
-- Workers Builds publishes main. The current SEO work is local and has not been committed, pushed, or deployed; production verification must follow an authorized release.
+- Workers Builds publishes main. The SEO implementation was committed and pushed as eec63ea and deployed by Workers Builds as version 9edff683-16c4-40db-9c85-cd2887142841. All 19 browser checks passed on apex, www, and dev (57 total), with public HTTP redirects passing. The user approved a test/documentation follow-up for Cloudflare stripping HTML GET ETags; use HEAD on the existing workers.dev preview of the same asset for the HTML validator without disabling zone protections. All 4 live edge checks and the focused public HTTP redirect check then passed (shell91dda8).
 - Lunr provides client-side search. Decap CMS remains deferred rather than enabled by this work.
 
 ## Content and components

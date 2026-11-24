@@ -41,6 +41,8 @@ Page templates use shared metadata to export titles, descriptions, canonical URL
 
 The browser checks validate metadata across the sitemap, follow resource-index links to detect omissions, and verify canonical URLs, structured data, social assets, and indexing exclusions.
 
+Cloudflare may remove HTML GET ETags when its existing zone protections or response transformations are enabled. The Worker retains asset validators; the cross-representation check obtains the HTML asset validator through HEAD on the existing workers.dev preview of the same asset, requires a distinct Markdown GET ETag, verifies Markdown 304s, and rejects cross-format 304s in both directions. HTML GET validator availability is not guaranteed after Cloudflare processing. HTTPS rewrites, email protection, and other zone security settings remain unchanged.
+
 ## Citable sections and images
 
 Published section headings have stable IDs. Markdown versions include a section index pointing to the actual canonical HTML fragments, so readers can cite sections without guessing anchor names. Tests check unique headings across all published pages and verify fragment navigation at mobile and desktop widths.

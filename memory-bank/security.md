@@ -18,6 +18,8 @@ HTTP noindex headers protect preview hosts, search, admin, errors, and direct ag
 
 There are no database, messaging, private blob-store, or new AI-service credentials in this feature. No environment or secrets file was overwritten. If private integrations are added, use managed production secret storage and least-privilege service identities.
 
+Cloudflare HTTPS rewrites and email obfuscation remain enabled. Cloudflare documents that these transformations can remove HTML GET ETags; do not disable protections to satisfy cache tests. After live diagnosis, the user approved obtaining the HTML asset validator through HEAD on the existing workers.dev preview of the same asset for cross-representation checks while retaining strict Markdown validators, matching 304s, and cross-format 200s. This qualifies the original HTML GET validator guarantee, not the representation-isolation requirement.
+
 ## Verification and observability
 
 Wrangler configuration retains sampled native Worker logs and traces. A failed optional Markdown asset fetch logs the public pathname, not query strings, cookies, or request headers, and falls back to HTML. Discarded response streams are canceled.

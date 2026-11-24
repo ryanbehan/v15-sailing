@@ -40,4 +40,6 @@ Only GET and HEAD negotiate representations. Markdown asset requests retain the 
 
 Preview/search/admin/error/direct-agent responses receive HTTP noindex headers. This does not prevent authorized public reading and does not change AI-training permissions. Canonical links always point to the apex HTML resource. No crawler-identity-based facts, runtime AI service, or managed Markdown conversion is introduced.
 
+Existing Cloudflare zone transformations can remove HTML GET and HEAD validators after the Worker. The user approved retaining those protections; live cross-format tests obtain the identical HTML asset's HEAD validator through the existing workers.dev preview, then test conditional isolation on canonical production URLs. Markdown ETags and matching 304s remain strict. No validator is fabricated.
+
 Native Worker logs and traces remain configured in wrangler.jsonc. GitHub/Workers Builds or an authorized manual Wrangler deployment publishes the export. Search Console and Bing ownership verification remain separate account operations; local verification does not establish a production release.

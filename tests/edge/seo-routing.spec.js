@@ -68,7 +68,7 @@ test('Accept negotiation honors quality and explicit opt-outs while keeping HTML
 });
 
 test('Markdown conditional requests and HEAD retain the correct representation identity', async ({ request }) => {
-  const html = await siteRequest(request, route, { accept: 'text/html' });
+  const html = await siteRequest(request, route, { accept: 'text/html', host: local ? 'v-15.org' : 'v15-sailing.southbay82.workers.dev' }, 'head');
   const markdown = await siteRequest(request, route, { accept: 'text/markdown' });
   const htmlTag = html.headers().etag;
   const markdownTag = markdown.headers().etag;
