@@ -5,7 +5,7 @@ test.describe('Homepage', () => {
   test('should load and display main heading', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('h1').first()).toContainText(
-      'Supporting the Vanguard 15 Sailing Community'
+      'Built to race.'
     );
   });
 });

@@ -1,11 +1,11 @@
 ---
 title: Vanguard 15 Clubs
-description: Active Vanguard 15 fleets and clubs across the country.
+description: Vanguard 15 fleets and clubs across the country, with current activity pending verification unless marked active.
 ---
 
 # Vanguard 15 Clubs & Fleets
 
-Connect with the V15 community at these active clubs and fleets.
+Connect with the V15 community at these clubs and fleets. Current V15 activity is pending verification unless a club is marked active.
 
 ## National Class Association
 *   **Facebook:** [Vanguard 15 Facebook](https://www.facebook.com/Vanguard15/)
@@ -24,6 +24,7 @@ Connect with the V15 community at these active clubs and fleets.
 *   **Contact:** info@tisailing.org
 
 ### Alameda Community Sailing Center
+*   **Status:** Active — confirmed by the community.
 *   **Location:** Alameda, CA
 *   **Website:** [sailalameda.org](https://www.sailalameda.org)
 *   Hosts Fleet 53's winter series and team races on the Alameda Estuary.
@@ -49,6 +50,7 @@ Connect with the V15 community at these active clubs and fleets.
 
 ## East Coast
 ### Connetquot River Dinghy Club
+*   **Status:** Active — confirmed by the community.
 *   **Location:** Oakdale, NY
 *   **Website:** [crdc.v-15.org](https://crdc.v-15.org) — home of the CRDC Frostbite Series
 *   **Facebook:** [CRDC Facebook Group](https://www.facebook.com/groups/connetquotriverdinghyclub)

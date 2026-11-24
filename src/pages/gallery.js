@@ -44,26 +44,29 @@ export default function Gallery() {
         <title>Gallery | V-15 Sailing</title>
         <meta name="description" content="Photos from Vanguard 15 fleets — Fleet 53 on San Francisco Bay and the CRDC frostbite fleet on the Connetquot River." />
       </Head>
-      <h1 className="text-3xl font-bold mb-4">Gallery</h1>
-      {sections.map((s) => (
-        <section key={s.title} className="mb-10">
-          <h2 className="text-xl font-semibold mb-1">{s.title}</h2>
-          <p className="mb-4 text-gray-700">
-            {s.blurb}{' '}
-            <a href={s.linkUrl} target="_blank" rel="noopener" className="text-sky-blue underline">
-              {s.linkText}
-            </a>
-          </p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {s.photos.map((p) => (
-              <figure key={p.src} className="m-0">
-                <img src={p.src} alt={p.alt} className="rounded-lg shadow w-full h-56 object-cover" loading="lazy" />
-                <figcaption className="text-sm text-gray-600 mt-1">{p.caption}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </section>
-      ))}
+      <div className="py-8">
+        <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Media / Gallery</p>
+        <h1 className="text-4xl font-black uppercase tracking-tight mb-8">Gallery</h1>
+        {sections.map((s) => (
+          <section key={s.title} className="mb-12">
+            <h2 className="text-xl font-bold uppercase tracking-wide mb-1">{s.title}</h2>
+            <p className="mb-5 text-white/60">
+              {s.blurb}{' '}
+              <a href={s.linkUrl} target="_blank" rel="noopener" className="text-signal underline">
+                {s.linkText}
+              </a>
+            </p>
+            <div className="grid gap-1 sm:grid-cols-2 lg:grid-cols-3">
+              {s.photos.map((p) => (
+                <figure key={p.src} className="m-0">
+                  <img src={p.src} alt={p.alt} className="w-full h-56 object-cover" loading="lazy" />
+                  <figcaption className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/50 mt-2 mb-4">{p.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
     </>
   );
 }

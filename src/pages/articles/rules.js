@@ -18,7 +18,7 @@ export default function Rules({ content }) {
       <Head>
         <title>Class Rules | V-15 Sailing</title>
       </Head>
-      <div className="prose mx-auto py-8">
+      <div className="prose prose-invert mx-auto py-8">
         <Markdown content={content} />
       </div>
     </>

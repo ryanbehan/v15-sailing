@@ -8,9 +8,17 @@ function normalizeAlerts(markdown) {
   return markdown.replace(/^> \[!(\w+)\]\s*/gm, (_, kind) => `> **${ALERTS[kind.toUpperCase()] || kind}:** `);
 }
 
+const defaultComponents = {
+  table: ({ node, ...props }) => (
+    <div className="overflow-x-auto">
+      <table {...props} />
+    </div>
+  ),
+};
+
 export default function Markdown({ content, components }) {
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
+    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={{ ...defaultComponents, ...components }}>
       {normalizeAlerts(content)}
     </ReactMarkdown>
   );

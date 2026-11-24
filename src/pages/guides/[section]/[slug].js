@@ -8,14 +8,14 @@ import Markdown from '../../../components/Markdown';
 export default function GuideArticle({ article }) {
   const router = useRouter();
   if (router.isFallback) return <p className="text-center py-20">Loading…</p>;
-  if (!article) return <p className="text-center py-20 text-red-600">Article not found.</p>;
+  if (!article) return <p className="text-center py-20 text-signal">Article not found.</p>;
 
   return (
     <>
       <Head>
         <title>{`${article.title} | V-15 Guides`}</title>
       </Head>
-      <article className="prose mx-auto py-8">
+      <article className="prose prose-invert mx-auto py-8">
         <h1>{article.title}</h1>
         <Markdown
           content={article.content}
@@ -36,13 +36,13 @@ export default function GuideArticle({ article }) {
         {article.original_pdf && (
           <p>
             Original PDF: {' '}
-            <a href={`/${article.original_pdf}`} className="text-sky-blue underline" target="_blank" rel="noopener noreferrer">
+            <a href={`/${article.original_pdf}`} className="text-signal underline" target="_blank" rel="noopener noreferrer">
               download
             </a>
           </p>
         )}
         {article.source_url && (
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-white/60">
             Originally published on{' '}
             <a href={article.source_url} className="underline" target="_blank" rel="noopener noreferrer">
               {article.source_url.includes('medium.com') ? 'Medium' : 'v15.org (archived)'}

@@ -14,6 +14,10 @@ export async function getStaticProps() {
     const title = titleLine.trim();
     const body = rest.join('\n').trim();
     return { title, body };
+  }).sort((a, b) => {
+    if (a.title === 'National Class Association') return -1;
+    if (b.title === 'National Class Association') return 1;
+    return a.title.localeCompare(b.title, 'en');
   });
   return { props: { clubs } };
 }
@@ -24,19 +28,25 @@ export default function Clubs({ clubs }) {
       <Head>
         <title>Clubs | V-15 Sailing</title>
       </Head>
-      <div className="prose mx-auto py-8">
+      <div className="prose prose-invert mx-auto py-8">
+        <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Index / Clubs</p>
         <h1>Vanguard 15 Clubs</h1>
+        <p className="border-l-2 border-signal pl-4">
+          <strong>Pending active club verification</strong><br />
+          CRDC and Alameda Community Sailing Center are confirmed active by the community.
+          All other club listings are pending verification of current V15 activity.
+        </p>
         <div className="space-y-4">
           {clubs.map(({ title, body }) => (
-            <div key={title} className="border rounded-lg p-4 hover:bg-gray-50 transition">
-              <h3>{title}</h3>
+            <div key={title} className="border border-white/10 bg-panel p-5 transition">
+              <h2>{title}</h2>
               <Markdown
                 content={body}
                 components={{
                   ul: ({ node, ...props }) => <ul className="list-disc pl-5" {...props} />,
                   li: ({ node, ...props }) => <li className="leading-relaxed" {...props} />,
                   a: ({ node, ...props }) => (
-                    <a className="text-sky-blue hover:underline" {...props} />
+                    <a className="text-signal hover:text-white transition" {...props} />
                   ),
                 }}
               />

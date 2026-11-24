@@ -12,7 +12,9 @@ This project deploys as a Cloudflare Worker serving static assets (`out/` via `w
 ### Deployment
 - Static export builds to `out/`; security headers live in `public/_headers` (served by Workers Static Assets).
 - Deploy manually: `npm run deploy:cf` (builds, then `wrangler deploy`). Pushes to `main` auto-deploy via Workers Builds.
-- Live URL: `https://dev.v-15.org` (Workers custom domain; also reachable at `https://v15-sailing.southbay82.workers.dev`).
+- Public URLs: `https://v-15.org` and `https://www.v-15.org` (Cloudflare edge routes to `v15-sailing`; existing proxied DNS retained). `https://dev.v-15.org` shares the same Worker as a custom domain.
+- `deployment/worker.js` redirects HTTP to HTTPS, preserving hostname, path, and query, then serves exported assets through the `ASSETS` binding. Routes and sampled Worker logs/traces are declared in `wrangler.jsonc`.
+- Race Edition and the clubs verification update are source-controlled alongside the public routing configuration. Workers Builds deploys `main` to the shared Worker serving all three hostnames.
 
 ### Post-Deploy Smoke Tests
 - A GitHub Actions workflow (`.github/workflows/post-deploy-tests.yml`) runs Playwright smoke tests against `https://dev.v-15.org`.

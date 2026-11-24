@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useRef, useState } from 'react';
 
 const dropdowns = {
   guides: {
@@ -36,21 +37,127 @@ const dropdowns = {
   },
 };
 
+const linkClass =
+  'block py-2 lg:py-0 font-mono text-xs uppercase tracking-[0.15em] xl:tracking-[0.2em] text-white/80 hover:text-signal transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal';
+const triggerClass = `${linkClass} cursor-pointer flex items-center gap-1`;
+
+function Logo() {
+  return (
+    <Link href="/" className="flex items-center gap-3 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal">
+      <img
+        src="/images/v15-mark.svg"
+        alt="Vanguard 15 logo"
+        width="128"
+        height="104"
+        className="h-9 w-auto"
+        onError={(e) => {
+          if (!e.currentTarget.src.endsWith('v15-logo.png')) {
+            e.currentTarget.src = '/images/v15-logo.png';
+          }
+        }}
+      />
+      <span className="text-xl font-black uppercase tracking-tight">
+        V-15<span className="text-race-red"> Sailing</span>
+      </span>
+    </Link>
+  );
+}
+
+function NavItems({ menu, openMenu, closeMenu, mobile = false }) {
+  return (
+    <ul className="lg:flex lg:items-center lg:gap-5 xl:gap-6">
+      <li><Link href="/articles/clubs" className={linkClass}>Clubs</Link></li>
+      {Object.entries(dropdowns).map(([key, { label, items }]) => (
+        <li className="relative" key={key}>
+          <button
+            type="button"
+            className={triggerClass}
+            data-testid={`nav-${key}${mobile ? '-mobile' : ''}`}
+            data-menu-trigger={key}
+            onClick={() => (menu === key ? closeMenu() : openMenu(key))}
+            onKeyDown={(e) => { if (e.key === 'Escape') closeMenu(key); }}
+            aria-haspopup="true"
+            aria-expanded={menu === key}
+          >
+            {label}
+            <svg className="w-3 h-3 text-signal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul
+            className={`lg:absolute lg:right-0 ${menu === key ? 'block' : 'hidden'} bg-panel border border-white/10 lg:mt-3 z-10 min-w-[200px]`}
+            onKeyDown={(e) => { if (e.key === 'Escape') closeMenu(key); }}
+          >
+            {items.map((item) => (
+              <li key={item.href} className="border-b border-white/10 last:border-0">
+                <Link
+                  href={item.href}
+                  data-testid={item.testid && `${item.testid}${mobile ? '-mobile' : ''}`}
+                  className="block px-4 py-2 font-mono text-xs uppercase tracking-[0.15em] text-white/70 hover:bg-signal hover:text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+      <li><Link href="/regattas" className={linkClass}>Regattas</Link></li>
+      <li><Link href="/gallery" className={linkClass}>Gallery</Link></li>
+      <li><Link href="/search" className={linkClass}>Search</Link></li>
+      <li><Link href="/about" className={linkClass}>About</Link></li>
+    </ul>
+  );
+}
+
 export default function Navbar() {
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menu, setMenu] = useState(null);
+  const headerRef = useRef(null);
+
+  const closeMenu = (focusKey) => {
+    setMenu(null);
+    if (focusKey) {
+      const triggers = headerRef.current?.querySelectorAll(`[data-menu-trigger="${focusKey}"]`);
+      Array.from(triggers || []).find((trigger) => trigger.getClientRects().length)?.focus();
+    }
+  };
+  const openMenu = (key) => setMenu(key);
+
+  useEffect(() => {
+    const closeAll = () => { setMenu(null); setMobileOpen(false); };
+    router.events.on('routeChangeStart', closeAll);
+    return () => router.events.off('routeChangeStart', closeAll);
+  }, [router.events]);
+
+  useEffect(() => {
+    if (!menu && !mobileOpen) return undefined;
+    const onPointerDown = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) {
+        setMenu(null);
+        setMobileOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', onPointerDown);
+    return () => document.removeEventListener('mousedown', onPointerDown);
+  }, [menu, mobileOpen]);
 
   return (
-    <header className="bg-navy-blue text-white relative z-50">
-      <nav className="container mx-auto flex items-center justify-between p-4">
-        <Link href="/" className="text-xl font-bold flex items-center gap-2">
-          <img src="/images/v15-logo.png" alt="Vanguard 15 logo" className="h-8 w-auto" />
-          <span>V-15 Sailing</span>
-        </Link>
+    <header ref={headerRef} className="bg-ink border-b-2 border-signal relative z-50">
+      <div className="container mx-auto flex items-center justify-between gap-6 px-4 py-3">
+        <div className="flex items-center gap-3 min-w-0">
+          <span className="hidden lg:block w-6 h-px bg-signal" aria-hidden="true" />
+          <Logo />
+        </div>
+        <nav className="hidden lg:block" aria-label="Primary">
+          <NavItems menu={menu} openMenu={openMenu} closeMenu={closeMenu} />
+        </nav>
         <button
           type="button"
-          className="sm:hidden focus:outline-none"
+          className="lg:hidden text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal p-1"
           onClick={() => setMobileOpen((o) => !o)}
+          onKeyDown={(e) => { if (e.key === 'Escape') setMobileOpen(false); }}
           aria-label="Toggle navigation"
           aria-expanded={mobileOpen}
         >
@@ -62,40 +169,13 @@ export default function Navbar() {
             )}
           </svg>
         </button>
-        <ul className={`sm:flex space-x-4 ${mobileOpen ? 'block' : 'hidden'} sm:block mt-4 sm:mt-0`}>
-          <li><Link href="/articles/clubs" className="hover:text-sky-blue">Clubs</Link></li>
-          {Object.entries(dropdowns).map(([key, { label, items }]) => (
-            <li className="relative" key={key}>
-              <button
-                type="button"
-                className="hover:text-sky-blue cursor-pointer"
-                data-testid={`nav-${key}`}
-                onClick={() => setMenu(menu === key ? null : key)}
-                onKeyDown={(e) => { if (e.key === 'Escape') setMenu(null); }}
-                aria-haspopup="true"
-                aria-expanded={menu === key}
-              >
-                {label}
-              </button>
-              <ul
-                className={`sm:absolute left-0 ${menu === key ? 'block' : 'hidden'} bg-navy-blue text-white shadow-lg mt-2 rounded z-10 min-w-[180px]`}
-              >
-                {items.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} className="block px-4 py-2 hover:bg-sky-blue" data-testid={item.testid}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-          <li><Link href="/regattas" className="hover:text-sky-blue">Regattas</Link></li>
-          <li><Link href="/gallery" className="hover:text-sky-blue">Gallery</Link></li>
-          <li><Link href="/search" className="hover:text-sky-blue">Search</Link></li>
-          <li><Link href="/about" className="hover:text-sky-blue">About</Link></li>
-        </ul>
-      </nav >
-    </header >
+      </div>
+      <nav
+        className={`lg:hidden container mx-auto px-4 border-t border-white/10 ${mobileOpen ? 'block py-3' : 'hidden'}`}
+        aria-label="Mobile"
+      >
+        <NavItems menu={menu} openMenu={openMenu} closeMenu={closeMenu} mobile />
+      </nav>
+    </header>
   );
 }

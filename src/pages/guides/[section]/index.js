@@ -25,12 +25,12 @@ export default function GuidesSection({ section, articles }) {
       <Head>
         <title>{`${display} | V-15 Sailing`}</title>
       </Head>
-      <div className="prose mx-auto py-8">
+      <div className="prose prose-invert mx-auto py-8">
         <h1>{display}</h1>
-      <div className="space-y-4">
+      <div className="space-y-3">
         {articles.map((a) => (
-          <div key={a.slug} className="border rounded-lg p-4 hover:bg-gray-50 transition leading-relaxed">
-            <Link href={`/guides/${section}/${a.slug}`} className="text-sky-blue hover:underline">
+          <div key={a.slug} className="border border-white/10 bg-panel p-4 transition leading-relaxed">
+            <Link href={`/guides/${section}/${a.slug}`} className="text-signal hover:text-white transition">
               {a.title}
             </Link>
           </div>

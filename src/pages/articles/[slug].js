@@ -13,7 +13,7 @@ export default function Article({ article }) {
 
   if (!article) {
     return (
-      <p className="text-center py-20 text-red-600">Article not found.</p>
+      <p className="text-center py-20 text-signal">Article not found.</p>
     );
   }
 
@@ -22,8 +22,9 @@ export default function Article({ article }) {
       <Head>
         <title>{`${article.title} | V-15 Sailing`}</title>
       </Head>
-      <article className="prose prose-lg mx-auto px-4 py-8 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-6 text-navy-blue">{article.title}</h1>
+      <article className="prose prose-lg prose-invert mx-auto px-4 py-8 max-w-4xl">
+        <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Article</p>
+        <h1 className="text-4xl font-black uppercase tracking-tight mb-6">{article.title}</h1>
         {article.content ? (
           article.format === 'markdown' ? (
             <Markdown content={article.content} />
@@ -34,10 +35,10 @@ export default function Article({ article }) {
             />
           )
         ) : (
-          <p className="text-xl text-gray-600">{article.description}</p>
+          <p className="text-xl text-white/60">{article.description}</p>
         )}
         {article.source_url && (
-          <p className="text-sm text-gray-500 mt-8">
+          <p className="text-sm text-white/60 mt-8">
             Originally published on{' '}
             <a href={article.source_url} className="underline" target="_blank" rel="noopener noreferrer">
               {article.source_url.includes('medium.com') ? 'Medium' : 'v15.org (archived)'}

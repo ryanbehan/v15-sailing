@@ -24,7 +24,7 @@ export default function PartCategory({ title, content }) {
       <Head>
         <title>{`${title} | V-15 Sailing`}</title>
       </Head>
-      <div className="prose mx-auto py-8">
+      <div className="prose prose-invert mx-auto py-8">
         <h1>{title}</h1>
         <Markdown content={content} />
       </div>

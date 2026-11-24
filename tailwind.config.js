@@ -13,6 +13,11 @@ module.exports = {
         'navy-blue': '#001F3F',
         'sky-blue': '#7FDBFF',
         'white': '#FFFFFF',
+        'ink': '#0A1420',
+        'panel': '#0F1D2E',
+        'signal': '#E8332A',
+        'accent': '#FF7167',
+        'signal-dark': '#C92820',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

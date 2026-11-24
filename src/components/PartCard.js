@@ -1,53 +1,49 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 
 export default function PartCard({ part }) {
     const [showVendors, setShowVendors] = useState(false);
+    const vendorsId = useId();
 
     return (
-        <div
-            className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 border border-gray-200"
-            onMouseEnter={() => setShowVendors(true)}
-            onMouseLeave={() => setShowVendors(false)}
-        >
-            <div className="flex justify-between items-start mb-4">
+        <div className="bg-panel border border-white/10 p-6 hover:border-signal transition-colors duration-300">
+            <div className="flex flex-wrap gap-3 justify-between items-start mb-4">
                 <div>
-                    <h3 className="text-xl font-bold text-navy-blue">{part.name}</h3>
-                    <span className="text-sm text-gray-500 font-mono">ID: {part.id}</span>
+                    <h3 className="text-xl font-bold uppercase tracking-wide text-white">{part.name}</h3>
+                    <span className="font-mono text-xs text-white/60">ID: {part.id}</span>
                 </div>
-                <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full uppercase tracking-wide font-semibold">
+                <span className="px-3 py-1 border border-signal text-signal font-mono text-[10px] uppercase tracking-[0.2em]">
                     {part.category}
                 </span>
             </div>
-
-            <p className="text-gray-700 mb-6 min-h-[3rem]">{part.description}</p>
-
-            <div className={`transition-all duration-300 overflow-hidden ${showVendors ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                <h4 className="text-sm font-semibold text-gray-900 mb-2 uppercase tracking-wider">Where to Buy</h4>
-                <div className="space-y-2">
-                    {part.vendors.map((vendor, index) => (
-                        <a
-                            key={index}
-                            href={vendor.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-between p-2 rounded bg-sky-50 hover:bg-sky-100 text-sky-700 transition-colors group"
-                        >
-                            <span className="font-medium">{vendor.name}</span>
-                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </a>
-                    ))}
-                </div>
-            </div>
-
+            <p className="text-white/60 mb-6 min-h-[3rem]">{part.description}</p>
             <button
                 type="button"
-                className={`w-full text-center text-sky-600 text-sm font-medium mt-2 ${showVendors ? 'hidden' : ''}`}
-                onClick={() => setShowVendors(true)}
+                aria-expanded={showVendors}
+                aria-controls={vendorsId}
+                className="w-full text-left font-mono text-xs uppercase tracking-[0.2em] text-signal py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal"
+                onClick={() => setShowVendors((shown) => !shown)}
             >
-                Show vendors
+                {showVendors ? 'Hide vendors' : 'Show vendors'}
             </button>
+            <div id={vendorsId}>
+                {showVendors && (
+                    <div className="space-y-2 mt-3">
+                        <h4 className="font-mono text-[10px] uppercase tracking-[0.3em] text-signal mb-2">Where to Buy</h4>
+                        {part.vendors.map((vendor) => (
+                            <a
+                                key={vendor.url}
+                                href={vendor.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-between p-2 bg-white/5 hover:bg-signal-dark text-white hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal"
+                            >
+                                <span className="font-mono text-xs uppercase tracking-[0.15em]">{vendor.name}</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        ))}
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

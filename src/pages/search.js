@@ -38,34 +38,39 @@ export default function Search({ docs }) {
       <Head>
         <title>Search | V-15 Sailing</title>
       </Head>
-      <h1 className="text-3xl font-bold mb-6">Search</h1>
-      <input
-        type="text"
-        placeholder="Search articles, parts, regattas..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="w-full border p-2 rounded mb-4"
-      />
-      {results.length > 0 ? (
-        <ul className="space-y-4">
-          {results.map((r) => (
-            <li key={`${r.type}-${r.id}`} className="border p-4 rounded-md hover:bg-gray-50">
-              {r.url.startsWith('http') ? (
-                <a href={r.url} target="_blank" rel="noopener" className="text-lg font-semibold text-sky-blue underline">
-                  {r.title}
-                </a>
-              ) : (
-                <a href={r.url} className="text-lg font-semibold text-sky-blue underline">
-                  {r.title}
-                </a>
-              )}
-              <p className="text-sm text-gray-600 capitalize">{r.type}</p>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        query && <p>No results found.</p>
-      )}
+      <div className="py-8">
+        <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Query / Search</p>
+        <h1 className="text-4xl font-black uppercase tracking-tight mb-6">Search</h1>
+        <label htmlFor="site-search" className="sr-only">Search the site</label>
+        <input
+          type="text"
+          id="site-search"
+          placeholder="Search articles, parts, regattas..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="w-full bg-panel border border-white/15 p-3 mb-6 text-white placeholder-white/60 font-mono text-sm focus:outline-none focus:border-signal"
+        />
+        {results.length > 0 ? (
+          <ul className="divide-y divide-white/10 border-y border-white/10">
+            {results.map((r) => (
+              <li key={`${r.type}-${r.id}`} className="py-4">
+                {r.url.startsWith('http') ? (
+                  <a href={r.url} target="_blank" rel="noopener" className="text-lg font-bold uppercase tracking-wide text-white hover:text-signal transition">
+                    {r.title}
+                  </a>
+                ) : (
+                  <a href={r.url} className="text-lg font-bold uppercase tracking-wide text-white hover:text-signal transition">
+                    {r.title}
+                  </a>
+                )}
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-signal mt-1">{r.type}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          query && <p className="text-white/60">No results found.</p>
+        )}
+      </div>
     </>
   );
 }

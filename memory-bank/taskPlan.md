@@ -47,9 +47,23 @@
 ### Dependency cleanup (`ee185f7`)
 - `npm audit` → **0 vulnerabilities** (was 29+): removed deprecated `netlify-cms-proxy-server`, npm `overrides` patched next's vendored postcss 8.4.31→8.5.28; lockfile regenerated (next@15.5.26).
 
+## Race Edition restyle — 2026-11-24
+- Completed on `design/marine-concepts`: Race Edition promoted from prototype to the shared site design, including navigation, footer, article/guide prose, parts finder, search, regattas, gallery, and 404.
+- Added scalable reconstructed V15 insignia and favicon; no official high-resolution vector master was located. Original raster remains a fallback.
+- Corrected mobile navigation, vendor disclosure keyboard/touch behavior, mobile regatta layout, table overflow, and text/button contrast through adversarial review iterations.
+- Patched dependency advisories using releases at least seven days old; `npm audit` reports zero vulnerabilities.
+- Verification: `make build` exports 48 pages; `make test` passes two tests; `make test-smoke BASE_URL=http://127.0.0.1:3016` passes seven tests; `make check` passes. Functional/accessibility and visual reviewers both report PASS for reviewed scope.
+- Local static preview: `make serve PORT=3016`. Published to Cloudflare on 2026-11-24, Worker version `3b36818b-6611-415f-93b1-2c4db5f76d8f`, serving `v-15.org/*`, `www.v-15.org/*`, and existing `dev.v-15.org` custom domain. Existing proxied Squarespace DNS records retained; edge routes handle all apex/www paths without an origin fetch. Mail/subdomain DNS unchanged. `deployment/worker.js` enforces HTTP-to-HTTPS with 308 redirects and preserves path/query; sampled logs/traces enabled. Public smoke tests pass 7/7 on each public hostname, favicon/logo return 200, nonexistent route returns 404. At the initial manual deployment, no Git commit, push, or merge had been performed; the owner subsequently requested merging and pushing the source to main. Existing orphaned CMS remains a separate backlog issue.
+
+## Clubs verification update — 2026-11-24
+- Regions now sort alphabetically after the separate national-resources section: East Coast, Midwest & South, West Coast.
+- Added a pending-active-club-verification note; Connetquot River Dinghy Club and Alameda Community Sailing Center are marked active based on the owner's confirmation. Other club listings remain pending current V15 activity verification.
+- Verified `make build` (48 pages), `make test` (2 tests), `make test-smoke BASE_URL=http://127.0.0.1:3016` (8 tests), and `make check`. The browser regression failed against the prior region order and passes after the change.
+
 ## Current Status
-- Everything merged to `main` and pushed through `858d220`. Site builds clean (43 pages), all tests pass, local preview on :8931.
-- **Done 2026-11-01:** hosting migrated to Cloudflare Workers Static Assets — LIVE at https://dev.v-15.org (custom domain verified, cert issued) and https://v15-sailing.southbay82.workers.dev. Zone v-15.org now on Cloudflare DNS; apex/www remain on Squarespace.
+- Release source includes Race Edition, alphabetical club regions, and community-confirmed active status for CRDC and Alameda. The owner requested merging `design/marine-concepts` into `main` and pushing; main-branch Workers Builds publishes the shared Worker.
+- Public routing: `https://v-15.org` and `https://www.v-15.org` use Cloudflare edge routes; `https://dev.v-15.org` is a custom domain on the same Worker. Mail DNS is unchanged.
+- Verification commands: `make build`, `make test`, `make test-smoke BASE_URL=http://127.0.0.1:3016`, `make check`. After publishing, run smoke tests with each public hostname as `BASE_URL`.
 
 ## Next Candidates (discussed, not started)
 1. Verify production deploy is live and serving latest commits.

@@ -4,3 +4,83 @@
 
 /* Custom global styles */
 
+body {
+  @apply bg-ink text-white antialiased;
+}
+
+::selection {
+  @apply bg-signal-dark text-white;
+}
+
+.prose {
+  @apply text-white/75 max-w-none;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply text-white font-bold uppercase tracking-wide;
+}
+.prose a {
+  @apply text-accent hover:text-white transition;
+}
+.prose strong {
+  @apply text-white;
+}
+.prose code {
+  @apply text-accent bg-white/10 px-1 font-mono;
+}
+.prose pre {
+  @apply bg-panel border border-white/10 rounded-none;
+}
+.prose pre code {
+  @apply bg-transparent text-white/80 px-0;
+}
+.prose blockquote {
+  @apply border-l-signal text-white/60 not-italic;
+}
+.prose th {
+  @apply text-white uppercase tracking-wide;
+}
+.prose td,
+.prose th {
+  @apply border-white/15;
+}
+.prose hr {
+  @apply border-white/15;
+}
+.prose ul > li::marker,
+.prose ol > li::marker {
+  @apply text-accent;
+}
+.prose img {
+  @apply rounded-none;
+}
+.article-content {
+  overflow-x: auto;
+}
+
+.text-signal,
+.hover\:text-signal:hover,
+.group:hover .group-hover\:text-signal {
+  color: #FF7167;
+}
+
+.text-race-red {
+  color: #E8332A;
+}
+
+.bg-signal.text-white,
+.hover\:bg-signal:hover {
+  background-color: #C92820;
+}
+
+.race-hero-shade {
+  background: rgba(10, 20, 32, 0.92);
+}
+
+@media (min-width: 1024px) {
+  .race-hero-shade {
+    background: linear-gradient(90deg, #0A1420 0%, rgba(10, 20, 32, 0.94) 52%, rgba(10, 20, 32, 0.3) 80%, rgba(10, 20, 32, 0.1) 100%);
+  }
+}

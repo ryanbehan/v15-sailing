@@ -4,6 +4,10 @@ This log captures key decisions made during the project, including rationale and
 
 ## Timestamped Decisions
 
+- **[2026-11-24 — public cutover]**: Published Race Edition to `v-15.org` and `www.v-15.org` using exact-host Worker routes declared in `wrangler.jsonc`. Custom-domain creation was blocked by existing Squarespace DNS records; DNS mutation via MCP failed to connect, so kept existing proxied records and routed traffic at Cloudflare instead. No DNS/mail records were removed. Added `deployment/worker.js` to redirect HTTP to HTTPS before serving the asset binding, and enabled sampled Worker logs/traces. Existing `dev.v-15.org` shares this Worker and receives the same release. Manual release version: `3b36818b-6611-415f-93b1-2c4db5f76d8f`; branch not merged.
+
+- **[2026-11-24]**: Preserve the approved Race Edition composition while separating decorative red (`#E8332A`) from accessible text accent (`#FF7167`) and filled controls (`#C92820`); small text and white button labels must meet AA contrast. Header/favicon use a documented reconstruction of the existing sail insignia, not a claimed official vector master. Patched Next to 15.5.29 and vulnerable transitive packages with releases older than seven days; static-only deployment is unchanged.
+
 - **[2025-07-11 10:30 AM]**: Chose Next.js 15.x for static site generation due to its performance, SEO benefits, and ease of exporting to static files compatible with Netlify hosting. Rationale: Aligns with requirements for a static website without server-side dependencies.
 
 - **[2025-07-11 10:35 AM]**: Selected Tailwind CSS 3.x for styling. Rationale: Provides utility-first classes for rapid, responsive design, fitting the mobile-first and sailing-themed requirements.
@@ -30,3 +34,5 @@ This log captures key decisions made during the project, including rationale and
 This log will be updated with new decisions as the project progresses.
 
 - **[2026-11-01]**: Migrated hosting Netlify → **Cloudflare Workers Static Assets** (`v15-sailing` Worker, `wrangler.jsonc` assets: ./out; zone `v-15.org` moved to Cloudflare DNS — dev.v-15.org attached as Workers custom domain). Rationale: owner preference; during setup the repo was connected via the Workers import flow rather than Pages, and Workers static hosting is Cloudflare's current model anyway — kept it. Build/deploy commands in Worker Settings → Build: `npm run build` / `npx wrangler deploy`. Note: apex/www still served by Squarespace (separate cutover if ever desired). Consequence: Netlify Identity/Git Gateway CMS path is now moot — `public/admin/` retained but orphaned.
+
+- **[2026-11]**: Adopted "Race Edition" marine concept as the site's production design system (branch `design/marine-concepts`): near-black navy `#0A1420` (ink), panel `#0F1D2E`, signal red `#E8332A`, sharp corners, mono technical labels. Rationale: approved by owner after previewing `src/components/prototypes/marine/RaceEdition.js`; unused prototypes remain local and are excluded from the release commit; the runtime `?variant=` switcher was removed from the rendered homepage. Removed false "Vanguard 15 Class Association" label from hero (site is community resources, not an official class association).
