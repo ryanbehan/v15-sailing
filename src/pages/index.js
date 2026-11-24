@@ -114,12 +114,12 @@ export default function Home({ articles }) {
             </p>
             <div className="grid gap-1 grid-cols-2 md:grid-cols-4">
               {[
-                { src: '/images/crdc/start-lineup.jpg', alt: 'V15s lined up at a start' },
+                { src: '/images/crdc/race-line.jpg', alt: 'Vanguard 15s lining up to race at CRDC', position: 'center bottom' },
                 { src: '/images/crdc/frostbite-fleet.jpg', alt: 'Frostbite fleet racing in winter' },
                 { src: '/images/crdc/capsize-recovery.jpg', alt: 'Sailor righting a capsized V15' },
                 { src: '/images/crdc/fleet-group-photo.jpg', alt: 'CRDC fleet sailors on shore' },
               ].map((img) => (
-                <img key={img.src} src={img.src} alt={img.alt} className="w-full h-40 md:h-48 object-cover" />
+                <img key={img.src} src={img.src} alt={img.alt} className="w-full h-40 md:h-48 object-cover" style={{ objectPosition: img.position || 'center' }} />
               ))}
             </div>
           </div>

@@ -22,7 +22,10 @@ const sections = [
     linkText: 'crdc.v-15.org',
     linkUrl: 'https://crdc.v-15.org',
     photos: [
-      { src: '/images/crdc/start-lineup.jpg', alt: 'V15s lined up at a start', caption: 'Lined up at the start' },
+      { src: '/images/crdc/race-line.jpg', alt: 'Vanguard 15s lining up to race at CRDC', caption: 'Lining up to race at CRDC', position: 'center bottom' },
+      { src: '/images/crdc/crdc-fleet.jpg', alt: 'Vanguard 15 fleet gathering on the water at CRDC', caption: 'The CRDC fleet on the water' },
+      { src: '/images/crdc/fleet-1.jpg', alt: 'Vanguard 15s racing across the river at CRDC', caption: 'Racing across the river' },
+      { src: '/images/crdc/flying.jpg', alt: 'Vanguard 15 crew hiking out at CRDC', caption: 'Hiking out at CRDC', position: 'center 70%' },
       { src: '/images/crdc/frostbite-fleet.jpg', alt: 'Frostbite fleet racing in winter', caption: 'Frostbite fleet racing' },
       { src: '/images/crdc/river-racing.jpg', alt: 'V15s racing on the Connetquot River', caption: 'Racing on the Connetquot River' },
       { src: '/images/crdc/fleet-upwind.jpg', alt: 'V15s sailing upwind', caption: 'Upwind leg' },
@@ -59,7 +62,7 @@ export default function Gallery() {
             <div className="grid gap-1 sm:grid-cols-2 lg:grid-cols-3">
               {s.photos.map((p) => (
                 <figure key={p.src} className="m-0">
-                  <img src={p.src} alt={p.alt} className="w-full h-56 object-cover" loading="lazy" />
+                  <img src={p.src} alt={p.alt} className="w-full h-56 object-cover" style={{ objectPosition: p.position || 'center' }} loading="lazy" />
                   <figcaption className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/50 mt-2 mb-4">{p.caption}</figcaption>
                 </figure>
               ))}

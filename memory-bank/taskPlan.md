@@ -66,6 +66,11 @@
 - Replaced runtime reconstructed branding with the owner-supplied Vanguard 15 artwork, processed to transparent `public/images/vanguard-15-logo.png`; matching PNG/ICO favicons generated. Source provenance is embedded in the PNG metadata; original artwork colors retained.
 - Local verification: 48 exported pages, two unit tests and nine browser smoke tests passing. Follow-up release is published through main-branch Workers Builds.
 
+## CRDC photo correction — 2026-11-24
+- Removed the owner-identified JY image `public/images/crdc/start-lineup.jpg` from the asset bundle and replaced its homepage/gallery references with `race-line.jpg`. Nationals now uses the Fleet 53 start photo instead.
+- Added all four supplied photos from `content/crdc/images/` to the CRDC gallery as optimized public JPEGs: `race-line.jpg`, `crdc-fleet.jpg`, `fleet-1.jpg`, and `flying.jpg`. Originals remain unchanged locally. Applied EXIF orientation, stripped metadata, capped the long edge at 1600px without upscaling, and adjusted portrait crops to retain the boats.
+- Verified `make build`, `make test` (2 tests), `make test-smoke BASE_URL=http://127.0.0.1:3016` (10 tests), and `make check`. The new photo regression fails before removal of the JY asset and passes after; it also checks homepage replacement, all four gallery images loading, and absence of the retired image on gallery/regattas.
+
 ## Current Status
 - Release source includes Race Edition, alphabetical club regions, and community-confirmed active status for CRDC and Alameda. The owner requested merging `design/marine-concepts` into `main` and pushing; main-branch Workers Builds publishes the shared Worker.
 - Public routing: `https://v-15.org` and `https://www.v-15.org` use Cloudflare edge routes; `https://dev.v-15.org` is a custom domain on the same Worker. Mail DNS is unchanged.
