@@ -16,7 +16,10 @@ export default function About() {
           thriving.
         </p>
         <p className="mt-4 text-white/75">
-          Have feedback or an event to add? Email us at{' '}
+          This site is volunteer-supported by the Connetquot River Dinghy Club in New York.
+        </p>
+        <p className="mt-4 text-white/75">
+          If you spot a correction or have an update, including an event to add, please email us at{' '}
           <a href="mailto:skipper@v-15.org" className="text-signal underline">
             skipper@v-15.org
           </a>

@@ -45,16 +45,11 @@ function Logo() {
   return (
     <Link href="/" className="flex items-center gap-3 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal">
       <img
-        src="/images/v15-mark.svg"
+        src="/images/vanguard-15-logo.png"
         alt="Vanguard 15 logo"
-        width="128"
-        height="104"
-        className="h-9 w-auto"
-        onError={(e) => {
-          if (!e.currentTarget.src.endsWith('v15-logo.png')) {
-            e.currentTarget.src = '/images/v15-logo.png';
-          }
-        }}
+        width="390"
+        height="412"
+        className="h-16 w-auto drop-shadow-[0_0_1px_rgba(255,255,255,0.95)]"
       />
       <span className="text-xl font-black uppercase tracking-tight">
         V-15<span className="text-race-red"> Sailing</span>

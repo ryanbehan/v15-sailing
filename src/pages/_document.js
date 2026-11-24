@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
-        <link rel="alternate icon" type="image/png" sizes="71x61" href="/images/v15-logo.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+        <link rel="alternate icon" href="/favicon.ico" />
       </Head>
       <body className="bg-ink text-white">
         <Main />

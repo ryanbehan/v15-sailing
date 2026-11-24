@@ -9,44 +9,6 @@ Connect with the V15 community at these clubs and fleets. Current V15 activity i
 
 ## National Class Association
 *   **Facebook:** [Vanguard 15 Facebook](https://www.facebook.com/Vanguard15/)
-*   **Pacific Northwest Fleet 69:** [mailing list](http://myfleet.org/mailman/listinfo/pnw-v15) covering Oregon, Washington, and British Columbia
-
-## West Coast
-### Vanguard 15 Fleet 53 — San Francisco Bay
-*   **Location:** San Francisco, CA (based at Treasure Island Sailing Center)
-*   **Website:** [vanguard15.org](https://vanguard15.org/)
-*   **Facebook:** [SFV15 Facebook](https://www.facebook.com/SFV15)
-*   One of the largest and most active one-design fleets in the country — weekly fleet and team racing April through September, a winter series at Alameda Community Sailing Center, and the traveling Championship Series.
-
-### Treasure Island Sailing Center
-*   **Location:** San Francisco, CA
-*   **Website:** [tisailing.org/v15-racing](https://www.tisailing.org/v15-racing/)
-*   **Contact:** info@tisailing.org
-
-### Alameda Community Sailing Center
-*   **Status:** Active — confirmed by the community.
-*   **Location:** Alameda, CA
-*   **Website:** [sailalameda.org](https://www.sailalameda.org)
-*   Hosts Fleet 53's winter series and team races on the Alameda Estuary.
-
-### Inverness Yacht Club
-*   **Location:** Inverness, CA (Tomales Bay)
-*   **Website:** [invernessyachtclub.com](https://www.invernessyachtclub.com)
-*   Hosted the 2024 Pacific Coast Championship / V15 Nationals.
-
-### Fresno Yacht Club
-*   **Location:** Huntington Lake, CA
-*   **Website:** [fresnoyachtclub.org](https://fresnoyachtclub.org)
-*   Hosts the annual High Sierra Regatta each July.
-
-### Willamette Sailing Club
-*   **Location:** Portland, OR
-*   **Website:** [willamettesailingclub.com](https://willamettesailingclub.com)
-
-### Seattle Yacht Club
-*   **Location:** Seattle, WA
-*   **Website:** [seattleyachtclub.org](https://www.seattleyachtclub.org)
-*   Maintains a 13-boat V15 fleet for adult instruction and racing.
 
 ## East Coast
 ### Connetquot River Dinghy Club
@@ -85,3 +47,42 @@ Connect with the V15 community at these clubs and fleets. Current V15 activity i
 ### Percy Priest Yacht Club
 *   **Location:** Nashville, TN
 *   **Website:** [ppyc.clubexpress.com](https://ppyc.clubexpress.com/)
+
+## West Coast
+*   **Pacific Northwest Fleet 69:** [mailing list](http://myfleet.org/mailman/listinfo/pnw-v15) covering Oregon, Washington, and British Columbia
+
+### Vanguard 15 Fleet 53 — San Francisco Bay
+*   **Location:** San Francisco, CA (based at Treasure Island Sailing Center)
+*   **Website:** [vanguard15.org](https://vanguard15.org/)
+*   **Facebook:** [SFV15 Facebook](https://www.facebook.com/SFV15)
+*   One of the largest and most active one-design fleets in the country — weekly fleet and team racing April through September, a winter series at Alameda Community Sailing Center, and the traveling Championship Series.
+
+### Treasure Island Sailing Center
+*   **Location:** San Francisco, CA
+*   **Website:** [tisailing.org/v15-racing](https://www.tisailing.org/v15-racing/)
+*   **Contact:** info@tisailing.org
+
+### Alameda Community Sailing Center
+*   **Status:** Active — confirmed by the community.
+*   **Location:** Alameda, CA
+*   **Website:** [sailalameda.org](https://www.sailalameda.org)
+*   Hosts Fleet 53's winter series and team races on the Alameda Estuary.
+
+### Inverness Yacht Club
+*   **Location:** Inverness, CA (Tomales Bay)
+*   **Website:** [invernessyachtclub.com](https://www.invernessyachtclub.com)
+*   Hosted the 2024 Pacific Coast Championship / V15 Nationals.
+
+### Fresno Yacht Club
+*   **Location:** Huntington Lake, CA
+*   **Website:** [fresnoyachtclub.org](https://fresnoyachtclub.org)
+*   Hosts the annual High Sierra Regatta each July.
+
+### Willamette Sailing Club
+*   **Location:** Portland, OR
+*   **Website:** [willamettesailingclub.com](https://willamettesailingclub.com)
+
+### Seattle Yacht Club
+*   **Location:** Seattle, WA
+*   **Website:** [seattleyachtclub.org](https://www.seattleyachtclub.org)
+*   Maintains a 13-boat V15 fleet for adult instruction and racing.

@@ -4,6 +4,8 @@ This log captures key decisions made during the project, including rationale and
 
 ## Timestamped Decisions
 
+- **[2026-11-24 — supplied logo]**: Owner supplied a Vanguard 15 logo hosted on Shopify. Removed its white background with alpha matting and retained source artwork colors; header, hero, and favicons now use that supplied artwork rather than the earlier reconstructed insignia. Source attribution and processing details are embedded in the transparent PNG metadata.
+
 - **[2026-11-24 — public cutover]**: Published Race Edition to `v-15.org` and `www.v-15.org` using exact-host Worker routes declared in `wrangler.jsonc`. Custom-domain creation was blocked by existing Squarespace DNS records; DNS mutation via MCP failed to connect, so kept existing proxied records and routed traffic at Cloudflare instead. No DNS/mail records were removed. Added `deployment/worker.js` to redirect HTTP to HTTPS before serving the asset binding, and enabled sampled Worker logs/traces. Existing `dev.v-15.org` shares this Worker and receives the same release. Manual release version: `3b36818b-6611-415f-93b1-2c4db5f76d8f`; branch not merged.
 
 - **[2026-11-24]**: Preserve the approved Race Edition composition while separating decorative red (`#E8332A`) from accessible text accent (`#FF7167`) and filled controls (`#C92820`); small text and white button labels must meet AA contrast. Header/favicon use a documented reconstruction of the existing sail insignia, not a claimed official vector master. Patched Next to 15.5.29 and vulnerable transitive packages with releases older than seven days; static-only deployment is unchanged.

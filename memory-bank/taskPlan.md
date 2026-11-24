@@ -60,6 +60,12 @@
 - Added a pending-active-club-verification note; Connetquot River Dinghy Club and Alameda Community Sailing Center are marked active based on the owner's confirmation. Other club listings remain pending current V15 activity verification.
 - Verified `make build` (48 pages), `make test` (2 tests), `make test-smoke BASE_URL=http://127.0.0.1:3016` (8 tests), and `make check`. The browser regression failed against the prior region order and passes after the change.
 
+## Public follow-up — 2026-11-24
+- Source markdown now follows National, East Coast, Midwest & South, West Coast; Pacific Northwest Fleet 69's mailing list belongs only to West Coast. Browser coverage checks full region order and placement.
+- About now credits volunteer support by Connetquot River Dinghy Club in New York and directs corrections/updates to the existing `skipper@v-15.org` contact.
+- Replaced runtime reconstructed branding with the owner-supplied Vanguard 15 artwork, processed to transparent `public/images/vanguard-15-logo.png`; matching PNG/ICO favicons generated. Source provenance is embedded in the PNG metadata; original artwork colors retained.
+- Local verification: 48 exported pages, two unit tests and nine browser smoke tests passing. Follow-up release is published through main-branch Workers Builds.
+
 ## Current Status
 - Release source includes Race Edition, alphabetical club regions, and community-confirmed active status for CRDC and Alameda. The owner requested merging `design/marine-concepts` into `main` and pushing; main-branch Workers Builds publishes the shared Worker.
 - Public routing: `https://v-15.org` and `https://www.v-15.org` use Cloudflare edge routes; `https://dev.v-15.org` is a custom domain on the same Worker. Mail DNS is unchanged.
