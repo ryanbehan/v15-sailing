@@ -24,51 +24,63 @@ Connect with the V15 community at these clubs and fleets. All of these are real 
 </div>
 
 ### Larchmont Yacht Club
-*   **Status:** Active — hosted the 2026 Vanguard 15 Spring Regatta.
+*   **Status:** Unverified — no V15 event on the club's 2026 schedule; last scored V15 results were Larchmont Race Week 2022. Much of the fleet was reportedly sold to CRDC.
 *   **Location:** Larchmont, NY
 *   **Website:** [larchmontyc.org](https://www.larchmontyc.org)
-*   One of the premier V15 fleets in the country; hosts the annual [Vanguard 15 Spring Regatta](https://www.larchmontyc.org/vanguard-15-spring-regatta).
+
+### Wianno Yacht Club
+*   **Status:** Listed — the club's 2025–26 site describes a V15 fleet racing Saturday mornings and some Wednesday evenings; recent results not found.
+*   **Location:** Osterville, MA
+*   **Website:** [wiannoyc.com](https://www.wiannoyc.com)
+*   **Contact:** wianno.yc@gmail.com
 
 ## Midwest & South
 ### Chicago Corinthian Yacht Club — Fleet 67
 *   **Status:** Active — the club's 2026 race program includes V15 Thursday night racing plus spring and fall frostbite series.
 *   **Location:** Chicago, IL
 *   **Website:** [corinthian.org](https://www.corinthian.org)
-*   **Fleet page:** [Fleet 67](https://corinthian.org/content.aspx?club_id=845458&module_id=525336&page_id=22) — fleet captain contact: v15fleet67@gmail.com
+*   **Fleet page:** [Fleet 67](https://www.corinthian.org/content.aspx?club_id=845458&module_id=525336&page_id=22) — fleet captain contact: v15fleet67@gmail.com
+
+### Chicago Yacht Club — Belmont Station
+*   **Status:** Active frostbite venue — the 2026 Belmont frostbite page lists Vanguard 15 alongside J/70, Sonar, and Laser.
+*   **Location:** Chicago, IL
+*   **Website:** [chicagoyachtclub.org](https://www.chicagoyachtclub.org)
 
 ### Percy Priest Yacht Club
-*   **Status:** Active — the 2026 schedule includes the V15 Exodus Regatta and Sunday dinghy racing.
+*   **Status:** Active — scheduled the 2026 Exodus Regatta with a V15 class (May 2–3) plus Sunday dinghy racing.
 *   **Location:** Nashville, TN
 *   **Website:** [ppyc.clubexpress.com](https://ppyc.clubexpress.com/)
-*   One of the larger V15 fleets in the region; hosted the 2015 V15 Nationals.
+*   Hosted the 2014 V15 Nationals.
 
 ### Lake Norman Yacht Club
-*   **Status:** Fleet unverified — last confirmed V15 activity was the 2023 Nationals and 2023 season racing. The club is active; its V15 fleet may be dormant.
+*   **Status:** Recently active — hosted the 2023 V15 Nationals; an 8-boat V15 class was reported at the 2025 Board Bash; 2026 events still list the class.
 *   **Location:** Mooresville, NC
 *   **Website:** [lakenormanyc.org](https://www.lakenormanyc.org)
+*   **Fleet page:** [Vanguard 15 Fleet 80](https://lakenormanyc.org/vanguard-15-fleet-80)
 
 ### Harbor Island Yacht Club
-*   **Status:** Unverified — a V15 fleet is listed on the club's site, but we found no recent dated V15 activity.
-*   **Location:** Hermitage, TN
+*   **Status:** Active — V15 listed on the club site and in the 2026 spring and fall dinghy series; hosted the 2021 V15 Nationals.
+*   **Location:** Old Hickory, TN
 *   **Website:** [hiyc.org](https://www.hiyc.org)
+*   **Contact:** racing@hiyc.org
 
 ## West Coast
 ### Vanguard 15 Fleet 53 — San Francisco Bay
-*   **Status:** Active — 2026 calendar includes weekly series and championship events.
-*   **Location:** San Francisco, CA (based at Treasure Island Sailing Center)
+*   **Status:** Active — 2026 winter series and January team race at ACSC; High Sierra Regatta in July. Weekly Treasure Island racing is not running while TISC is closed.
+*   **Location:** San Francisco Bay Area (formerly Treasure Island; 2026 racing based mainly at Alameda Community Sailing Center)
 *   **Website:** [vanguard15.org](https://vanguard15.org/)
 *   **Facebook:** [SFV15 Facebook](https://www.facebook.com/SFV15)
 *   **Mailing list:** vanguard15@googlegroups.com
 *   One of the largest and most active one-design fleets in the country — weekly fleet and team racing April through September, a winter series at Alameda Community Sailing Center, and the traveling Championship Series.
 
 ### Treasure Island Sailing Center
-*   **Status:** Active — home of Fleet 53's Thursday and Tuesday night series.
+*   **Status:** Paused — TISC announced a two-to-three-year shutdown in February 2025 while its site is redeveloped.
 *   **Location:** San Francisco, CA
 *   **Website:** [tisailing.org/v15-racing](https://www.tisailing.org/v15-racing/)
 *   **Contact:** info@tisailing.org
 
 ### Alameda Community Sailing Center
-*   **Status:** Active — hosts Fleet 53's winter series and 2026 Wednesday night team racing (mixed FJ and V15).
+*   **Status:** Active — hosted Fleet 53's 2026 winter series and a January team race; advertises Thursday evening short-course racing for Lasers and V15s. A community signup sheet also organized 2026 Wednesday night team racing (mixed FJ and V15).
 *   **Location:** Alameda, CA
 *   **Website:** [sailalameda.org](https://www.sailalameda.org)
 
@@ -85,7 +97,7 @@ Connect with the V15 community at these clubs and fleets. All of these are real 
 ### Willamette Sailing Club — Fleet 69
 *   **Status:** Fleet exists, recent racing unverified — home of Pacific Northwest Fleet 69 with an active fleet page, but we found no 2026 V15-specific racing.
 *   **Location:** Portland, OR
-*   **Website:** [willamettesailingclub.com/vanguard-15](https://willamettesailingclub.com/vanguard-15/)
+*   **Website:** [willamettesailingclub.com](https://willamettesailingclub.com/)
 *   **Mailing list:** [PNW V15 list](http://myfleet.org/mailman/listinfo/pnw-v15) covering Oregon, Washington, and British Columbia
 
 ### Seattle Yacht Club

@@ -13,14 +13,14 @@ test('regattas page partitions confirmed, unconfirmed, and past seasons', async 
   await expect(current.locator('li')).toHaveCount(1);
 
   const awaiting = page.getByRole('heading', { name: 'Awaiting Confirmation', exact: true }).locator('..');
-  for (const name of ['V15 Nationals / Pacific Coast Championship', 'Lake Norman V15 Racing', 'Fleet 67 Fall Frostbiting', 'Fleet 67 Thursday Evening Series']) {
+  for (const name of ['V15 Nationals / Pacific Coast Championship', 'Lake Norman V15 Racing', 'Fleet 67 Fall Frostbiting', 'Fleet 67 Thursday Evening Series', 'Vanguard 15 Spring Regatta', 'Thursday Night Series', 'Tuesday Night Team Racing']) {
     await expect(awaiting.getByRole('heading', { name, exact: true })).toBeVisible();
   }
   await expect(awaiting).toContainText('unconfirmed');
 
   const year2026 = page.locator('p', { hasText: /^2026$/ });
   await expect(year2026).toBeVisible();
-  for (const name of ['High Sierra Regatta', 'Vanguard 15 Spring Regatta', 'New Years Day Regatta', 'Winter Series', 'Thursday Night Series', 'Tuesday Night Team Racing', 'Fleet 53 Championship Series']) {
+  for (const name of ['High Sierra Regatta', 'New Years Day Regatta', 'Winter Series', 'Fleet 53 Championship Series', 'ACSC Wednesday Team Racing']) {
     await expect(past.getByRole('heading', { name, exact: true })).toBeVisible();
   }
 });
