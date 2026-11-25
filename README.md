@@ -43,6 +43,12 @@ The browser checks validate metadata across the sitemap, follow resource-index l
 
 Cloudflare may remove HTML GET ETags when its existing zone protections or response transformations are enabled. The Worker retains asset validators; the cross-representation check obtains the HTML asset validator through HEAD on the existing workers.dev preview of the same asset, requires a distinct Markdown GET ETag, verifies Markdown 304s, and rejects cross-format 304s in both directions. HTML GET validator availability is not guaranteed after Cloudflare processing. HTTPS rewrites, email protection, and other zone security settings remain unchanged.
 
+## Photo attribution
+
+Use photos only where their club/event context is supported. The owner confirmed that all `/images/crdc/` photos are CRDC; never use them to illustrate another club's regatta. Legacy `/images/fleet53/` filenames are not proof of a Fleet 53 venue or event. The gallery separates confirmed CRDC photography from clearly labeled unconfirmed archive photos and omits misleading/non-V15 archive illustrations.
+
+Regatta photos are optional. Supply `image`, descriptive `imageAlt` and an accurate visible `imageCaption` only after verifying the association; uncaptioned images are not rendered. Do not fill missing photos with generic or another club's photography. Unknown locations remain unconfirmed, not guessed. Published HTML and generated Markdown carry the same attribution caveats. Browser regressions cover CRDC group/host separation, unconfirmed gallery attribution and removed generic regatta images.
+
 ## Citable sections and images
 
 Published section headings have stable IDs. Markdown versions include a section index pointing to the actual canonical HTML fragments, so readers can cite sections without guessing anchor names. Tests check unique headings across all published pages and verify fragment navigation at mobile and desktop widths.

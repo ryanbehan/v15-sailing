@@ -1,5 +1,9 @@
 # Security and external dependencies
 
+## Photo-attribution integrity
+
+Photo association is a publisher-reviewed content claim, not something inferred from a filename. The owner confirmed CRDC asset ownership; other uncertain archive locations remain explicitly unconfirmed. Event images are optional and require visible contextual captions. Browser regressions exercise actual exported attribution and prevent known cross-club reuse. No image files, credentials, external services, access controls or transport/security protections are changed by this content hotfix.
+
 ## Public content and transport
 
 The site intentionally publishes static sailing resources and photography. Public reading requires no account. The Worker redirects HTTP and www requests to the HTTPS apex, preserves real 404 statuses, and serves only the ASSETS binding. It is not a general URL proxy or filesystem API.

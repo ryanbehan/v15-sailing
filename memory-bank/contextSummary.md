@@ -1,5 +1,9 @@
 # Context Summary for Vanguard 15 Sailing Website Project
 
+## Current photo-attribution hotfix
+
+User authorized fixing gallery and regatta misattribution and pushing production. Photo-only branch fix/photo-attribution lives in isolated worktree /Users/ryan/build/v15-sailing-photo-fix from main cb96886, separate from CI feature976efcc (original /Users/ryan/build/v15-sailing with dirty auth-checkpoint docs and unrelated files). All24 distinct used photos visually inspected. CRDC images are only CRDC; uncertain upwind-crew and two other archive photos are explicitly unconfirmed, four inappropriate/misdescribed archive photos omitted. Eleven unsupported regatta thumbnails removed; only CRDC series retains a captioned club photo. No event venue guessed: official New Year source confirms Alameda; unrelated CRDC image removed. Two new real browser regressions failed before repair on exact reported attribution errors; final Make verification is underway. See taskPlan.md top for scope and proof. Publish only hotfix files via existing main Workers Builds after checks; do not activate or merge pending CI automation, change Cloudflare account/security settings, or manually deploy in parallel. Managed gate activation remains blocked by missing workers-ci.write and is not part of this urgent photo release.
+
 ## Timestamped Log
 - **[2025-07-11 10:44 AM]**: Project initialization phase. Node.js project set up with package.json. Dependencies installed: next, react, react-dom, tailwindcss (dev), postcss (dev), autoprefixer (dev). Attempt to initialize Tailwind config failed; needs resolution. Planning complete for breaking down tasks into subtasks to optimize token usage. Memory-bank initialized for context tracking.
 

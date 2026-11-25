@@ -2,6 +2,8 @@
 
 ## Overview
 
+Photo ownership is explicit: confirmed CRDC photos are grouped under CRDC, unconfirmed archive locations are labeled, and event listings do not borrow other clubs' images. Regatta photographs require a visible imageCaption; descriptive imageAlt replaces fabricated event-name photo labels. HTML and generated Markdown preserve the same caveats.
+
 A volunteer-supported Vanguard 15 community resource with sailing guides, historical articles and rules, club listings, parts information, regatta links, and fleet photography. It uses the Race Edition navy/red design. It is not presented as the official class association.
 
 ## Stack and hosting

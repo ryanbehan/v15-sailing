@@ -5,5 +5,7 @@
   "host": "Connetquot River Dinghy Club",
   "hostUrl": "https://crdc.v-15.org",
   "url": "https://crdc.v-15.org",
-  "image": "/images/crdc/frostbite-fleet.jpg"
+  "image": "/images/crdc/frostbite-fleet.jpg",
+  "imageAlt": "CRDC frostbite fleet sailing on the Connetquot River",
+  "imageCaption": "CRDC — frostbite fleet sailing"
 }

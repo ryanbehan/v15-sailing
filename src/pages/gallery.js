@@ -3,40 +3,36 @@ import SectionHeading from '../components/SectionHeading';
 
 const sections = [
   {
-    title: 'Vanguard 15 Fleet 53',
-    blurb: 'Racing on San Francisco Bay — Thursday nights, team racing, and fleet championships.',
-    linkText: 'vanguard15.org',
-    linkUrl: 'https://vanguard15.org/photos/',
-    photos: [
-      { src: '/images/fleet53/planing-cityfront.jpg', alt: 'V15 planing past the San Francisco cityfront', caption: 'Planing past the cityfront' },
-      { src: '/images/fleet53/bay-bridge-fleet.jpg', alt: 'V15 fleet racing under the Bay Bridge', caption: 'Fleet under the Bay Bridge' },
-      { src: '/images/fleet53/fleet-start.jpg', alt: 'V15s at the start line', caption: 'At the start' },
-      { src: '/images/fleet53/hiking-upwind.jpg', alt: 'Crew hiking hard upwind', caption: 'Hiking upwind' },
-      { src: '/images/fleet53/cityfront-spinnakers.jpg', alt: 'Spinnakers up along the San Francisco waterfront', caption: 'Kites up on the cityfront' },
-      { src: '/images/fleet53/upwind-crew.jpg', alt: 'V15 sailing upwind', caption: 'Upwind work' },
-      { src: '/images/fleet53/rafted-dock.jpg', alt: 'V15s rafted at the dock after racing', caption: 'Back at the dock' },
-    ],
-  },
-  {
     title: 'Connetquot River Dinghy Club',
-    blurb: 'The frostbite fleet in Oakdale, NY — sailing select Sundays November through April.',
+    blurb: 'Sailing and shore scenes from CRDC in Oakdale, New York.',
     linkText: 'crdc.v-15.org',
     linkUrl: 'https://crdc.v-15.org',
     photos: [
       { src: '/images/crdc/race-line.jpg', alt: 'Vanguard 15s lining up to race at CRDC', caption: 'Lining up to race at CRDC', position: 'center bottom' },
       { src: '/images/crdc/crdc-fleet.jpg', alt: 'Vanguard 15 fleet gathering on the water at CRDC', caption: 'The CRDC fleet on the water' },
-      { src: '/images/crdc/fleet-1.jpg', alt: 'Vanguard 15s racing across the river at CRDC', caption: 'Racing across the river' },
-      { src: '/images/crdc/flying.jpg', alt: 'Vanguard 15 crew hiking out at CRDC', caption: 'Hiking out at CRDC', position: 'center 70%' },
-      { src: '/images/crdc/frostbite-fleet.jpg', alt: 'Frostbite fleet racing in winter', caption: 'Frostbite fleet racing' },
-      { src: '/images/crdc/river-racing.jpg', alt: 'V15s racing on the Connetquot River', caption: 'Racing on the Connetquot River' },
-      { src: '/images/crdc/fleet-upwind.jpg', alt: 'V15s sailing upwind', caption: 'Upwind leg' },
-      { src: '/images/crdc/clubhouse-racing.jpg', alt: 'V15s racing past the clubhouse', caption: 'Past the clubhouse' },
-      { src: '/images/crdc/capsize-recovery.jpg', alt: 'Sailor righting a capsized V15', caption: 'Righting a capsized boat' },
-      { src: '/images/crdc/sailors-drysuits.jpg', alt: 'CRDC sailors in drysuits', caption: 'Drysuit season' },
-      { src: '/images/crdc/misty-morning.jpg', alt: 'V15s sailing on a misty morning', caption: 'Misty morning' },
-      { src: '/images/crdc/fleet-group-photo.jpg', alt: 'CRDC fleet sailors on shore', caption: 'The fleet ashore' },
-      { src: '/images/crdc/snowy-boatyard.jpg', alt: 'Snowy CRDC boatyard', caption: 'The boatyard in winter' },
-      { src: '/images/crdc/ice-covered-boats.jpg', alt: 'Ice-covered V15s', caption: 'Ice-covered hulls' },
+      { src: '/images/crdc/fleet-1.jpg', alt: 'Vanguard 15s racing across the river at CRDC', caption: 'Racing across the river at CRDC' },
+      { src: '/images/crdc/flying.jpg', alt: 'Sailors hiking out at CRDC', caption: 'Hiking out at CRDC', position: 'center 70%' },
+      { src: '/images/crdc/frostbite-fleet.jpg', alt: 'CRDC frostbite fleet sailing on the Connetquot River', caption: 'CRDC frostbite fleet' },
+      { src: '/images/crdc/river-racing.jpg', alt: 'Vanguard 15s racing on the Connetquot River at CRDC', caption: 'Racing on the Connetquot River at CRDC' },
+      { src: '/images/crdc/fleet-upwind.jpg', alt: 'Vanguard 15 fleet sailing at CRDC', caption: 'Fleet sailing at CRDC' },
+      { src: '/images/crdc/clubhouse-racing.jpg', alt: 'Dinghies racing along the waterfront at CRDC', caption: 'Waterfront racing at CRDC' },
+      { src: '/images/crdc/capsize-recovery.jpg', alt: 'Sailors recovering a capsized dinghy at CRDC', caption: 'Capsize recovery at CRDC' },
+      { src: '/images/crdc/sailors-drysuits.jpg', alt: 'CRDC sailors in drysuits', caption: 'Drysuit season at CRDC' },
+      { src: '/images/crdc/misty-morning.jpg', alt: 'Vanguard 15s sailing under cloudy skies at CRDC', caption: 'Cloudy-day sailing at CRDC' },
+      { src: '/images/crdc/fleet-group-photo.jpg', alt: 'CRDC fleet sailors on shore', caption: 'The CRDC fleet ashore' },
+      { src: '/images/crdc/snowy-boatyard.jpg', alt: 'Snowy CRDC boatyard', caption: 'The CRDC boatyard in winter' },
+      { src: '/images/crdc/ice-covered-boats.jpg', alt: 'Snow and ice covering boats at CRDC', caption: 'Winter ashore at CRDC' },
+    ],
+  },
+  {
+    title: 'Archive — location unconfirmed',
+    blurb: 'Club, event and location are not confirmed for these archive photos. They are not presented as photos of a particular fleet or regatta.',
+    linkText: 'Source archive',
+    linkUrl: 'https://vanguard15.org/photos/',
+    photos: [
+      { src: '/images/fleet53/fleet-start.jpg', alt: 'Vanguard 15s sailing together; location unconfirmed', caption: 'Vanguard 15 fleet — location unconfirmed' },
+      { src: '/images/fleet53/hiking-upwind.jpg', alt: 'Vanguard 15s lined up on the water; location unconfirmed', caption: 'Fleet lined up — location unconfirmed' },
+      { src: '/images/fleet53/upwind-crew.jpg', alt: 'Dinghy crews sailing near a wooded shoreline; location unconfirmed', caption: 'Crews under sail — location unconfirmed' },
     ],
   },
 ];
@@ -46,7 +42,7 @@ export default function Gallery() {
     <>
       <Seo
         title="Vanguard 15 Sailing Photos"
-        description="Photos from Vanguard 15 fleets — Fleet 53 on San Francisco Bay and the CRDC frostbite fleet on the Connetquot River."
+        description="Sailing and shore photos from Connetquot River Dinghy Club, plus archive photographs whose club, event and location await verification."
         path="/gallery/"
         type="CollectionPage"
       />

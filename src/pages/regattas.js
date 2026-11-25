@@ -23,13 +23,17 @@ export default function Regattas({ regattas }) {
             vanguard15.org
           </a>
           {' '}has the latest dates and registration details for West Coast events.
+          {' '}Photos are shown only with confirmed club attribution; other listings intentionally have no image.
         </p>
         <ul className="divide-y divide-white/10 border-y border-white/10">
           {regattas.map((r) => (
             <li key={r.url} className="group">
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 py-4">
-                {r.image && (
-                  <img src={r.image} alt={r.name} className="w-full h-48 sm:w-40 sm:h-28 object-cover flex-shrink-0" loading="lazy" decoding="async" />
+                {r.image && r.imageCaption && (
+                  <figure className="m-0 w-full sm:w-40 flex-shrink-0">
+                    <img src={r.image} alt={r.imageAlt || r.imageCaption} className="w-full h-48 sm:h-28 object-cover" loading="lazy" decoding="async" />
+                    <figcaption className="mt-2 text-xs text-white/60">{r.imageCaption}</figcaption>
+                  </figure>
                 )}
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4 flex-1 min-w-0">
                   <div>

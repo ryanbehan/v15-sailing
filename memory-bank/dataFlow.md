@@ -1,5 +1,9 @@
 # Data flow
 
+## Photo context
+
+Gallery source records contain confirmed CRDC attribution or explicit unconfirmed archive context. Regatta JSON includes an image only where its association is supported; the template requires imageCaption and renders imageAlt/caption alongside it. No generic fallback substitutes another club's image. The normal static export and agent generator carry these descriptions and caveats into both HTML and Markdown. Asset directory names are not independent evidence of a venue.
+
 ## Build and publication
 
 ```mermaid
