@@ -131,17 +131,13 @@ test('sitemap covers linked published resources and excludes duplicate or non-in
   expect(await robots.text()).toContain('Sitemap: https://v-15.org/sitemap.xml');
 });
 
-test('search and error HTML explicitly opt out of indexing', async ({ page }) => {
-  for (const route of ['/search/?q=rigging', '/404.html']) {
-    const metadata = await readMetadata(page, route);
-    expect(metadata.robots).toContain('noindex');
-    expect(metadata.data).toHaveLength(0);
-    if (route.startsWith('/search/')) {
-      expect(metadata.canonicals).toEqual(['https://v-15.org/search/']);
-    } else {
-      expect(metadata.canonicals).toHaveLength(0);
-    }
-  }
+test('error HTML opts out of indexing and retired routes stay gone', async ({ page }) => {
+  const metadata = await readMetadata(page, '/404.html');
+  expect(metadata.robots).toContain('noindex');
+  expect(metadata.data).toHaveLength(0);
+  expect(metadata.canonicals).toHaveLength(0);
+  const removedSearch = await page.request.get('/search/');
+  expect(removedSearch.status()).toBe(404);
 });
 
 test('client-side navigation replaces canonical metadata instead of accumulating tags', async ({ page }) => {

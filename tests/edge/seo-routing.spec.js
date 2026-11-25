@@ -28,7 +28,7 @@ test('preview and non-indexable assets have HTTP indexing protection without cor
   const preview = await siteRequest(request, '/', { host: 'dev.v-15.org' });
   expect(preview.status()).toBe(200);
   expect(noindex(preview)).toBe(true);
-  for (const [path, status] of [['/search/?q=vang', 200], ['/admin/', 200], ['/index.md', 200], ['/llms.txt', 200], ['/images/crdc/start-lineup.jpg', 404]]) {
+  for (const [path, status] of [['/admin/', 200], ['/index.md', 200], ['/llms.txt', 200], ['/images/crdc/start-lineup.jpg', 404]]) {
     const response = await siteRequest(request, path);
     expect(response.status()).toBe(status);
     expect(noindex(response), path).toBe(true);
@@ -59,9 +59,6 @@ test('Accept negotiation honors quality and explicit opt-outs while keeping HTML
       }
     });
   }
-  const search = await siteRequest(request, '/search/', { accept: 'text/markdown' });
-  expect(search.headers()['content-type']).toMatch(/^text\/html/);
-  expect(noindex(search)).toBe(true);
   const missing = await siteRequest(request, '/images/crdc/start-lineup.jpg', { accept: 'text/markdown' });
   expect(missing.status()).toBe(404);
   expect(noindex(missing)).toBe(true);

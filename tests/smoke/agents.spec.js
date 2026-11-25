@@ -61,7 +61,7 @@ test('Markdown preserves source material, diagram source, and fleet-verification
   expect(clubBody).toContain('Pending active club verification');
   expect(clubBody).toContain('CRDC and Alameda Community Sailing Center are confirmed active by the community.');
   expect(clubBody).toContain('All other club listings are pending verification of current V15 activity.');
-  for (const route of ['/search/', '/404.html']) {
+  for (const route of ['/404.html']) {
     const response = await page.request.get(route);
     expect(await response.text()).not.toContain('rel="alternate" type="text/markdown"');
   }

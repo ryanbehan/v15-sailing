@@ -99,7 +99,6 @@ function NavItems({ menu, openMenu, closeMenu, mobile = false }) {
       ))}
       <li><Link href="/regattas" className={linkClass}>Regattas</Link></li>
       <li><Link href="/gallery" className={linkClass}>Gallery</Link></li>
-      <li><Link href="/search" className={linkClass}>Search</Link></li>
       <li><Link href="/about" className={linkClass}>About</Link></li>
     </ul>
   );

@@ -19,7 +19,7 @@ Connect with the V15 community at these clubs and fleets. Current V15 activity i
 
 <div class="grid grid-cols-3 gap-2 my-2">
   <img src="/images/crdc/river-racing.jpg" alt="V15s racing on the Connetquot River" class="rounded w-full h-24 object-cover" />
-  <img src="/images/crdc/sailors-drysuits.jpg" alt="CRDC sailors in drysuits" class="rounded w-full h-24 object-cover" />
+  <img src="/images/crdc/crdc-fleet.jpg" alt="CRDC fleet sailing on the Connetquot River" class="rounded w-full h-24 object-cover" />
   <img src="/images/crdc/snowy-boatyard.jpg" alt="Snowy CRDC boatyard" class="rounded w-full h-24 object-cover" />
 </div>
 

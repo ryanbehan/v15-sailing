@@ -7,7 +7,8 @@ const routes = [
   '/articles',
   '/parts',
   '/regattas',
-  '/search',
+  '/gallery',
+  '/articles/clubs',
 ];
 
 test('clubs lists regions alphabetically and distinguishes confirmed active clubs', async ({ page }) => {

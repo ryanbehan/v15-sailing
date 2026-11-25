@@ -35,7 +35,7 @@ Run one Worker dev server at a time. For HTTP host-redirect checks, restart it w
 
 ## SEO metadata and sitemap
 
-Page templates use shared metadata to export titles, descriptions, canonical URLs, social previews, and factual structured data directly into HTML. Guide frontmatter can provide a `description`; otherwise, metadata uses the published content. Search and error pages opt out of indexing.
+Page templates use shared metadata to export titles, descriptions, canonical URLs, social previews, and factual structured data directly into HTML. Guide frontmatter can provide a `description`; otherwise, metadata uses the published content. Error pages opt out of indexing; the former site-search page was removed.
 
 `make build` generates the sitemap after Next.js exports the site. The generator reads each page's canonical URL and robots metadata, excludes admin and non-indexable pages, and fails if a canonical does not match its exported route. It writes identical copies to `out/sitemap.xml` and `public/sitemap.xml` so local development and deployment stay aligned. Do not edit the sitemap by hand; rebuild after adding or changing content. Modification dates are omitted rather than fabricated.
 
@@ -61,7 +61,7 @@ The build generates `out/llms.txt` and an `index.md` representation for each ind
 
 These files are generated build artifacts. Use `make build` and `make serve` to preview them; the Next.js development server does not generate or serve these exported alternatives. Agent-discovery files are a convenience for compatible readers, not a Google ranking signal. Generating them does not change crawler training permissions.
 
-The Worker serves Markdown at canonical HTML URLs when the Accept header prefers it, using Negotiator for quality values, wildcards, and charset parameters. GET and HEAD retain representation-specific ETags and `Vary: Accept`; conditional HTML probes cannot incorrectly return a Markdown 304. Direct Markdown URLs carry a canonical Link header and noindex protection, while negotiated canonical URLs remain indexable on production. Search, admin, errors, llms.txt, and all nonproduction hosts also receive HTTP noindex protection. There is no crawler-identity-based content switching or new runtime service.
+The Worker serves Markdown at canonical HTML URLs when the Accept header prefers it, using Negotiator for quality values, wildcards, and charset parameters. GET and HEAD retain representation-specific ETags and `Vary: Accept`; conditional HTML probes cannot incorrectly return a Markdown 304. Direct Markdown URLs carry a canonical Link header and noindex protection, while negotiated canonical URLs remain indexable on production. Admin, errors, llms.txt, and all nonproduction hosts also receive HTTP noindex protection. There is no crawler-identity-based content switching or new runtime service.
 
 ---
 

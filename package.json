@@ -27,7 +27,6 @@
   "homepage": "https://github.com/southbay82/v15-sailing#readme",
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "lunr": "^2.3.9",
     "negotiator": "1.1.0",
     "next": "^15.3.5",
     "pako": "^2.1.0",

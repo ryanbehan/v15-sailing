@@ -80,16 +80,3 @@ async function readCollection(collectionName) {
     return [];
   }
 }
-
-export async function getAllContent() {
-  const [articles, parts, regattas] = await Promise.all([
-    getArticles(),
-    getParts(),
-    getRegattas(),
-  ]);
-  return [
-    ...articles.map((a) => ({ id: a.url, title: a.title, text: `${a.title} ${a.description}`, type: 'article', url: `/articles/${a.url}` })),
-    ...parts.map((p) => ({ id: p.url, title: p.name, text: `${p.name} ${p.description}`, type: 'part', url: p.url })),
-    ...regattas.map((r) => ({ id: r.url || r.name, title: r.name, text: `${r.name} ${r.location}`, type: 'regatta', url: r.url || r.hostUrl })),
-  ];
-}
