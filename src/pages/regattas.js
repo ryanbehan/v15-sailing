@@ -25,6 +25,15 @@ function RegattaRow({ r, meta }) {
                 </a>
               </p>
             )}
+            {r.contact && (
+              <p className="text-sm text-white/55">
+                Contact:{' '}
+                <a href={`mailto:${r.contact}`} className="text-signal underline">
+                  {r.contact}
+                </a>
+              </p>
+            )}
+            {r.notes && <p className="text-xs text-white/45">{r.notes}</p>}
             {meta && <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white/40">{meta}</p>}
           </div>
           {r.url && (
