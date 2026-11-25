@@ -1,0 +1,47 @@
+name: Release Readiness
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install locked dependencies
+        run: make install-ci
+      - name: Install Chromium and system dependencies
+        run: make install-browser-ci
+      - name: Exercise build environment and full release gate
+        run: make release-capability
+      - name: Package the verified output without publishing
+        run: make package-verified
+      - name: Retain check results and environment receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-readiness-${{ github.sha }}
+          path: |
+            .wrangler/release/report
+            .wrangler/release/results
+            .wrangler/release/verified.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7

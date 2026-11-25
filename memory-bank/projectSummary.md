@@ -27,6 +27,10 @@ deployment/worker.js combines HTTPS/www canonicalization, preview and duplicate-
 
 ## Verification and maintenance
 
+The local release workflow uses make release-check: build/regenerate once, run unit/protocol and published-reference checks, start a fresh owned loopback Worker for all browser/edge tests, and bind the verified output plus source/content/assets/tooling/tests/configuration to the current commit and Node/platform in .wrangler/release/verified.json. make package-verified exercises the same output with Wrangler dry-run; make deploy runs the gate and guarded publishing without another build. npm deploy:cf delegates to make deploy. Broken internal targets fail; historical/recurring event dates and pending club activity produce advisory review notices.
+
+The project build-and-release skill documents these actual commands and authorization boundaries. The new release-readiness workflow defines PR/main/manual validation and nonpublishing packaging on Node 22/Ubuntu with read-only checkout credentials. GitHub execution, required checks, managed Cloudflare image compatibility and remote build-command activation are NOT established by local success. Existing Workers Builds account settings remain unchanged; there is no second active deployer.
+
 Use Makefile targets for builds and tests. Jest and a native Worker-entry-point test cover unit contracts; Playwright checks published metadata, sitemap coverage, agent fidelity, section citations, mobile/desktop navigation, and local Worker delivery. Tests use real exported assets rather than mocked integration services. Local TLS exceptions apply only to loopback.
 
 See [the task plan](taskPlan.md), [decision log](decisionLog.md), [data flow](dataFlow.md), [security and dependencies](security.md), and [repository README](../README.md). Search Console and Bing ownership verification remain separate account tasks; llms.txt is agent convenience, not a claimed Google ranking signal.

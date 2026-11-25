@@ -88,4 +88,4 @@ async function publishedPages() {
   return pages.sort((a, b) => a.url.localeCompare(b.url, 'en'));
 }
 
-module.exports = { OUTPUT_DIR, publishedPages };
+module.exports = { OUTPUT_DIR, publishedPages, elements, attributes };

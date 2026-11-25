@@ -11,7 +11,7 @@ This project deploys as a Cloudflare Worker serving static assets (`out/` via `w
 
 ### Deployment
 - Static export builds to `out/`; security headers live in `public/_headers` (served by Workers Static Assets).
-- Deploy manually: `npm run deploy:cf` (builds, then `wrangler deploy`). Pushes to `main` auto-deploy via Workers Builds.
+- Authorized manual publishing: `make deploy` (full release gate, receipt validation, authentication, then deployment without another build). `npm run deploy:cf` delegates to that same guarded path. Pushes to `main` auto-deploy via Workers Builds; its remote gate activation is a separate account operation, not performed by this source change.
 - Public URLs: `https://v-15.org` and `https://www.v-15.org` (Cloudflare edge routes to `v15-sailing`; existing proxied DNS retained). `https://dev.v-15.org` shares the same Worker as a custom domain.
 - `deployment/worker.js` permanently redirects HTTP and `www` to the HTTPS apex, preserving paths and query strings, then serves exported assets through the `ASSETS` binding. Preview hosts remain usable but return `X-Robots-Tag: noindex, follow`. Routes and sampled Worker logs/traces are declared in `wrangler.jsonc`.
 - Race Edition and the clubs verification update are source-controlled alongside the public routing configuration. Workers Builds deploys `main` to the shared Worker serving all three hostnames.
@@ -22,6 +22,28 @@ This project deploys as a Cloudflare Worker serving static assets (`out/` via `w
 ---
 
 ## Local Development
+
+### Build and release skill
+
+Use `/build-and-release` with `build`, `verify`, or `release` for the repository's [build-and-release workflow](.devin/skills/build-and-release/SKILL.md). The skill documents commands, source/SEO review, publication approval and evidence reporting; invoking it does not authorize publication.
+
+Run `make release-check` for the complete pre-release gate. It builds once, regenerates discovery files, runs unit/protocol and local-reference checks, and starts a fresh owned HTTPS Worker for all browser/SEO/agent and edge checks. It refuses remote test origins, filters and occupied ports. Readiness, failure traces and process cleanup are managed by Playwright. The default port is 3027; use `RELEASE_PORT=3028` consistently if needed. The Worker uses a loopback-only self-signed certificate; production TLS validation remains enabled.
+
+Successful checks write `.wrangler/release/verified.json`. The receipt binds exported output, source/content/public assets, release tooling, configuration, tests/workflows, commit, Node version and platform. `make package-verified` checks it and runs Wrangler with `--dry-run`, without publishing or rebuilding. `make publish-verified` checks it before an authorized real deployment. Missing/stale receipts fail; rerun the gate after changing inputs or committing. A receipt is a local freshness check, not signed provenance against a malicious checkout writer.
+
+`make check-content` rejects broken local page/image/document links and HTML fragments using the published exports. It prints advisory warnings for pending club verification, recurring/unconfirmed event dates and past events. Human confirmation is still required; archives and caveated listings are not automatically invalid. External link availability does not block releases.
+
+### CI and Cloudflare activation status
+
+`.github/workflows/release-check.yml` defines read-only PR/main/manual validation on Ubuntu and Node 22: locked dependency/browser installation, `make release-capability`, and `make package-verified`, retaining reports and the environment receipt. `release-capability` executes the real complete gate rather than asserting a feature flag. No deployment token or publish step is included. The workflow must be pushed before GitHub can run it; no GitHub-hosted result or required branch protection is claimed here.
+
+Cloudflare's existing remote build/deploy commands have not been changed. First obtain approval and prove the following commands in an isolated managed-build context, including Chromium/system dependencies and local Wrangler support:
+
+- Build: `make install-browser-ci && make release-capability`
+- Deploy: `make publish-verified`
+
+Keep the supported Node environment aligned with CI and use the same checkout/output across both stages. Do not activate these commands on the live shared Worker until the managed-build proof succeeds. A Mac or GitHub runner does not prove Cloudflare image compatibility. If unsupported, stop for an approved alternative; do not skip checks or add a second active deployer.
+
 Use Node 22.12 or newer for the pinned Wrangler tooling.
 - Build the static site: `make build`.
 - Serve the export locally: `make serve PORT=3016`.

@@ -11,8 +11,8 @@
     "dev": "next dev",
     "build": "next build && node deployment/generate-sitemap.cjs && node deployment/generate-agent-content.cjs",
     "start": "next start",
-    "test": "jest && node --test tests/worker-protocol.mjs",
-    "deploy:cf": "npm run build && wrangler deploy"
+    "test": "jest && node --test tests/*-protocol.mjs",
+    "deploy:cf": "make deploy"
   },
   "repository": {
     "type": "git",

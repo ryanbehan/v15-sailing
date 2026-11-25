@@ -14,9 +14,13 @@ flowchart LR
     HTML --> Out[out directory]
     Sitemap --> Out
     Agents --> Out
-    Out --> Deploy[Authorized Cloudflare deployment]
+    Out --> Gate[Unit, content, browser and local Worker checks]
+    Gate --> Receipt[Bound artifact and input receipt]
+    Receipt --> Deploy[Authorized guarded deployment without rebuild]
     Deploy --> Assets[Workers Static Assets]
 ```
+
+This gate describes the supported Make/manual path and the proposed Workers Builds activation. It is not proof that the existing Cloudflare account settings or GitHub required checks were changed. The receipt and failure traces remain in gitignored .wrangler/release/, outside public assets. Publication consumes the checked export from the same unchanged workspace; output or source/config/test mutations invalidate it. Content checking reports pending activity and non-year-specific/past event dates for human review without inventing new facts.
 
 Published HTML is the discovery authority. Invalid or duplicate canonicals fail the build. Agent exports retain original Markdown where available; other pages use their rendered main content. Selected source/PDF attribution and club-verification caveats are preserved. Generated sitemap and agent files contain no fabricated modification dates, authors, or official-association claims.
 

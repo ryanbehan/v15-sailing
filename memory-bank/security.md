@@ -20,6 +20,14 @@ There are no database, messaging, private blob-store, or new AI-service credenti
 
 Cloudflare HTTPS rewrites and email obfuscation remain enabled. Cloudflare documents that these transformations can remove HTML GET ETags; do not disable protections to satisfy cache tests. After live diagnosis, the user approved obtaining the HTML asset validator through HEAD on the existing workers.dev preview of the same asset for cross-representation checks while retaining strict Markdown validators, matching 304s, and cross-format 200s. This qualifies the original HTML GET validator guarantee, not the representation-isolation requirement.
 
+## Release gate boundaries
+
+Local release checks force HTTPS loopback, reject remote BASE_URL/WORKER_URL values and filtered routing suites, refuse occupied ports and let Playwright own readiness/cleanup of a fresh Worker. Real exported assets are used for browser/runtime checks; dependency stand-ins exist only in isolated unit fixtures. Production TLS and all existing zone protections remain unchanged.
+
+A successful full check records an unsigned local freshness receipt under gitignored .wrangler/release/. It binds output, source/content/public assets, release tooling/tests/workflows/configuration, commit and Node/platform. Guarded packaging/publishing rejects missing or changed inputs and does not rebuild. This is not signed provenance or a security boundary against someone who can edit the checkout/receipt. Use an unchanged workspace between gate and publish. No environment/secrets files are read into the fingerprint.
+
+The PR workflow uses pull_request, read-only contents permissions and nonpersisted checkout credentials; it installs locked dependencies/browsers and performs only dry-run packaging, not deployment. Reports contain public local-site test evidence and a digest/environment receipt, not deployment credentials. Actual manual publishing still verifies managed Wrangler authentication. No new service, secret, branch protection, Cloudflare account setting or active deployer was introduced. Remote enforcement must be explicitly activated only after a real managed-build compatibility proof.
+
 ## Verification and observability
 
 Wrangler configuration retains sampled native Worker logs and traces. A failed optional Markdown asset fetch logs the public pathname, not query strings, cookies, or request headers, and falls back to HTML. Discarded response streams are canceled.

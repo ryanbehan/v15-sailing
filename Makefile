@@ -4,8 +4,9 @@ WORKER_PORT ?= 3017
 WORKER_PROTOCOL ?= https
 WORKER_URL ?= $(WORKER_PROTOCOL)://127.0.0.1:$(WORKER_PORT)
 ROUTING_ARGS ?=
+RELEASE_PORT ?= 3027
 
-.PHONY: install install-ci install-browser-ci dev build serve serve-worker test check test-smoke test-routing
+.PHONY: install install-ci install-browser-ci dev build serve serve-worker test check test-smoke test-routing test-release check-content release-check release-browser release-capability deploy publish-verified package-verified
 
 install:
 	npm install
@@ -39,3 +40,26 @@ test-smoke:
 
 test-routing:
 	BASE_URL=$(WORKER_URL) npx playwright test tests/edge $(ROUTING_ARGS)
+
+test-release:
+	node --test tests/release-protocol.mjs
+
+release-check:
+	RELEASE_PORT=$(RELEASE_PORT) node deployment/release.cjs
+
+release-browser:
+	RELEASE_PORT=$(RELEASE_PORT) npx --no-install playwright test --config deployment/playwright.release.cjs
+
+release-capability: release-check
+
+check-content:
+	node deployment/check-content.cjs
+
+package-verified:
+	node deployment/publish-verified.cjs --dry-run
+
+publish-verified:
+	node deployment/publish-verified.cjs
+
+deploy:
+	RELEASE_PORT=$(RELEASE_PORT) node deployment/release.cjs --publish
