@@ -1,8 +1,10 @@
 {
   "name": "High Sierra Regatta",
   "date": "July 11–12",
+  "seasonEnd": "2026-07-12",
   "location": "Huntington Lake, Fresno Yacht Club",
   "host": "Fresno Yacht Club",
   "hostUrl": "https://fresnoyachtclub.org",
-  "url": "https://vanguard15.org/schedule/1470"
+  "url": "https://vanguard15.org/schedule/1470",
+  "verifiedOn": "2026-11-25"
 }

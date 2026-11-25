@@ -1,8 +1,10 @@
 {
   "name": "New Years Day Regatta",
   "date": "January 1",
+  "seasonEnd": "2026-01-01",
   "location": "Alameda Community Sailing Center, Alameda, CA",
   "host": "Alameda Community Sailing Center",
   "hostUrl": "https://www.sailalameda.org",
-  "url": "https://vanguard15.org/schedule/1464"
+  "url": "https://vanguard15.org/schedule/1464",
+  "verifiedOn": "2026-11-25"
 }

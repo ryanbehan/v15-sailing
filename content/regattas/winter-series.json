@@ -1,8 +1,10 @@
 {
   "name": "Winter Series",
   "date": "Select Sundays, January–March",
+  "seasonEnd": "2026-03-31",
   "location": "Alameda Community Sailing Center, Alameda, CA",
   "host": "Alameda Community Sailing Center",
   "hostUrl": "https://www.sailalameda.org",
-  "url": "https://vanguard15.org/schedule/"
+  "url": "https://vanguard15.org/schedule/",
+  "verifiedOn": "2026-11-25"
 }
