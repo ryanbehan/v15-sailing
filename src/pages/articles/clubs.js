@@ -28,7 +28,7 @@ export default function Clubs({ clubs }) {
     <>
       <Seo
         title="Vanguard 15 Clubs & Fleets"
-        description="Find Vanguard 15 clubs by region. CRDC and Alameda Community Sailing Center are community-confirmed active; other listings await activity verification."
+        description="Find Vanguard 15 clubs by region. Clubs marked active have confirmed current V15 sailing; other fleets may have scaled back or disbanded."
         path="/articles/clubs/"
         type="CollectionPage"
       />
@@ -36,9 +36,10 @@ export default function Clubs({ clubs }) {
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-signal mb-4">Index / Clubs</p>
         <h1>Vanguard 15 Clubs</h1>
         <p className="border-l-2 border-signal pl-4">
-          <strong>Pending active club verification</strong><br />
-          CRDC and Alameda Community Sailing Center are confirmed active by the community.
-          All other club listings are pending verification of current V15 activity.
+          <strong>Club activity verification</strong><br />
+          Every club here is a real sailing organization with a history of V15 activity — but V15 fleets
+          come and go, and some may have scaled back or disbanded. Clubs marked Active have confirmed
+          current V15 sailing as of November 2026; for the rest, check with the club before planning a visit.
         </p>
         <div className="space-y-4">
           {clubs.map(({ title, body }) => (

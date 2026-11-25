@@ -22,7 +22,12 @@ const sections = [
   {
     href: '/regattas/',
     title: 'Racing',
-    text: 'Weekly series and championship regattas on the Fleet 53 calendar.',
+    text: 'Weekly series, team racing, and championship regattas across V15 fleets nationwide.',
+  },
+  {
+    href: '/articles/clubs/',
+    title: 'Clubs & Fleets',
+    text: 'Where to sail a V15 — active fleets and clubs by region, with activity status.',
   },
 ];
 
@@ -51,8 +56,7 @@ export default function Home({ articles }) {
               <span>Vanguard 15<br />Community Resources</span>
             </div>
             <h1 className="text-6xl md:text-8xl font-black uppercase leading-[0.92] tracking-tight max-w-4xl">
-              Built to race.<br />
-              <span className="text-race-red">Ready to sail.</span>
+              Built to <span className="text-race-red">race.</span>
             </h1>
             <p className="mt-6 text-lg text-white/70 max-w-lg font-light">
               Tuning guides, parts data, and the regatta calendar for the strict one-design V15.

@@ -58,9 +58,8 @@ test('Markdown preserves source material, diagram source, and fleet-verification
   expect(guideBody).toContain('https://medium.com/@alsargent/top-5-vanguard-15-rigging-tips-a479794689c8');
   const clubs = await page.request.get('/articles/clubs/index.md');
   const clubBody = matter(await clubs.text()).content;
-  expect(clubBody).toContain('Pending active club verification');
-  expect(clubBody).toContain('CRDC and Alameda Community Sailing Center are confirmed active by the community.');
-  expect(clubBody).toContain('All other club listings are pending verification of current V15 activity.');
+  expect(clubBody).toContain('some may have scaled back or disbanded');
+  expect(clubBody).toContain('Clubs marked Active have confirmed current V15 sailing');
   for (const route of ['/404.html']) {
     const response = await page.request.get(route);
     expect(await response.text()).not.toContain('rel="alternate" type="text/markdown"');

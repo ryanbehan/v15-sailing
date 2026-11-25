@@ -16,10 +16,10 @@ test('clubs lists regions alphabetically and distinguishes confirmed active club
   const regions = page.getByRole('heading', { level: 2 });
   await expect(regions).toHaveText(['National Class Association', 'East Coast', 'Midwest & South', 'West Coast']);
   const west = page.getByRole('heading', { name: 'West Coast', exact: true }).locator('..');
-  await expect(west.getByRole('link', { name: 'mailing list', exact: true })).toHaveAttribute('href', 'http://myfleet.org/mailman/listinfo/pnw-v15');
+  await expect(west.getByRole('link', { name: 'PNW V15 list', exact: true })).toHaveAttribute('href', 'http://myfleet.org/mailman/listinfo/pnw-v15');
   const national = page.getByRole('heading', { name: 'National Class Association', exact: true }).locator('..');
   await expect(national).not.toContainText('Pacific Northwest Fleet 69');
-  await expect(page.getByText('Pending active club verification', { exact: true })).toBeVisible();
+  await expect(page.getByText('Club activity verification', { exact: true })).toBeVisible();
   for (const club of ['Connetquot River Dinghy Club', 'Alameda Community Sailing Center']) {
     const heading = page.getByRole('heading', { name: club, exact: true });
     await expect(heading.locator('xpath=following-sibling::ul[1]')).toContainText('Status: Active');
