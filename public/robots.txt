@@ -2,4 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 Sitemap: https://v-15.org/sitemap.xml
